@@ -8,6 +8,7 @@ main {
   font-style: normal;
 }
 
+
 .poppins-extrabold {
   font-family: "Poppins", sans-serif;
   font-weight: 800;
@@ -21,6 +22,29 @@ main {
     background-color: #0A113F;
 }
 
-nav{
+#logo{
     position: relative;
+    width: 300px;
+    height: 160px;
+    margin-top: -40px;
+    float: left;
 }
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+}
+
+
+ #nav1 a, #nav2 a{
+    position: relative;
+    color: #FFFAFA;
+    text-decoration: none;
+    font-size: 22px;
+    margin-right: 15px;
+}
+
+
