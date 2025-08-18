@@ -1,3 +1,9 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+}
+
 main {
     background-color: lightpink;
 }
@@ -18,24 +24,31 @@ main {
 #cabecalho{
     position: relative;
     width: 100%;
-    height:80px ;
+    height: 120px;
     background-color: #0A113F;
 }
 
 #logo{
     position: relative;
-    width: 300px;
-    height: 160px;
-    margin-top: -40px;
+    width: 470px;
+    height: 270px;
+    margin-top: -80px;
     float: left;
 }
 
-nav{
+#navegação_principal{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
+    height: 30px;
+}
 
+#nav1, #nav2 {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
 }
 
 
@@ -43,8 +56,18 @@ nav{
     position: relative;
     color: #FFFAFA;
     text-decoration: none;
-    font-size: 22px;
-    margin-right: 15px;
+    font-size: 20px;
 }
 
 
+#nav1 a {
+    position: relative;
+    margin-right:50px;
+    margin-left: -36px;
+}
+    
+
+#nav2 a {
+    position: relative;
+    margin-right: 20px;
+}
