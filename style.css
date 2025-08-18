@@ -24,22 +24,24 @@ main {
 #cabecalho{
     position: relative;
     width: 100%;
-    height: 120px;
+    height: 100px;
     background-color: #0A113F;
 }
 
 #logo{
     position: relative;
-    width: 470px;
-    height: 270px;
-    margin-top: -80px;
+    width: 250px;
+    height: 140px;
+    margin-top: -20px;
     float: left;
 }
 
 #navegação_principal{
+    position: relative;
     display: flex;
+    
     width: 100%;
-    height: 30px;
+    height: 30px; /*alinhado de cima para baixo*/
 }
 
 #nav1, #nav2 {
@@ -51,23 +53,51 @@ main {
     float: left;
 }
 
+#nav2{
+    padding-left: 300px;
+}
 
  #nav1 a, #nav2 a{
     position: relative;
     color: #FFFAFA;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
+
+    line-height: 105px;
 }
 
-
 #nav1 a {
-    position: relative;
+    
     margin-right:50px;
     margin-left: -36px;
 }
     
-
-#nav2 a {
+#login a {
     position: relative;
     margin-right: 20px;
+    text-align: center;
+    display: inline;
+    height: 40px;
+
+    /*formato botão*/
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 7px 15px;
+    color: #FFFAFA;
+    background: transparent;
+}
+
+#cadastro a{
+    position: relative;
+    margin-right: 20px;
+    text-align: center;
+    display: inline;
+    height: 40px;
+
+    /*formato botão*/
+    border: 1px solid white;
+    border-radius: 15px;
+    padding: 7px 15px;
+    color:#0A113F;
+    background: #92FF00;
 }
