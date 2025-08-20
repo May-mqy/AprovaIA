@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     padding: 0px;
     margin: 0px;
@@ -6,31 +8,8 @@
 
 body{
     background-color:#FFFAFA;
+    font-family: "Poppins", sans-serif;
 }
-
-main {
-    background-color:#6ea7e9;
-}
-
-/*Fontes usadas no Figma */
-.poppins-regular {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.poppins-bold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-}
-
-.poppins-extrabold {
-  font-family: "Poppins", sans-serif;
-  font-weight: 800;
-  font-style: normal;
-}
-
 
 .montserrat {
   font-family: "Montserrat", sans-serif;
@@ -124,7 +103,7 @@ main {
 
 #texto_inicial{ 
     position: relative;
-    margin: 200px 0px 0px 100px;
+    margin: 160px 0px 0px 100px;
     color: #0A113F;
     font-family: "Montserrat", sans-serif;
 }
@@ -136,18 +115,17 @@ p{
     color: #0A113F;
     text-align: justify;
 
-    font-size: 35px;
+    font-size: 25px;
     font-weight: 550;
     line-height: normal;
     margin-bottom: 10px;
 } 
 
 .texto1{
-    width: 500px;
-    height: 194px;
-    font-weight: 100;
+    width: 600px;
+    height: 150px;
     margin-top: 20px;
-    font-size: 25px;
+    
 }
 
 h2{
@@ -192,26 +170,44 @@ img{
     margin-top: 30px;
 }
 
-#botao_inicio a{
-    position: relative;
-    align-items: center;
-    width: 400px;
-    height: 55px;
-
-    /*formato botão*/
-    border-radius: 15px;
-    padding: 10px 1px;
-    color:#FFFAFA;
-    background:#0A113F;
-    text-decoration: none;
-    box-shadow: 10px 7px 4px 0 rgba(0, 0, 0, 0.25);
-    cursor: pointer;
-  
-    gap: 10px;
+button{
+    width: 35%;
+    
 }
 
-.somente_logo{
-    width: 30px;
-    height: 30px;
+#botao_inicio a{
+    color: #FFFAFA;
+    font-family: sans-serif;
+    font-size: 25px;
+    font-weight: bold;
 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    border-radius: 40px;
+    text-decoration: none;
+    background-color: #0f1a4a;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#botao_inicio a:hover {
+  background-color: #050e35;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.432);
+}
+
+.botao_icon {
+  width: 80px;
+  height: 50px;
+  margin-left:12px;
+}
+
+
+/*Seção Vestibulares */
+.vestibular img{
+    position: relative;
+    width: 100px;
+    height: 100px;
 }
