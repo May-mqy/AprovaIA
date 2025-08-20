@@ -6,17 +6,19 @@
     border: 0px;
 }
 
+:root {
+  --cor-principal: #0A113F;
+  --cor-fundo-clara: #FFFAFA;
+  --cor-destaque: #92FF00;
+  --fonte-poppins: "Poppins", sans-serif;
+  --fonte-montserrat: "Montserrat", sans-serif;
+}
+
 body{
-    background-color:#FFFAFA;
+    background-color:var(--cor-fundo-clara);
     font-family: "Poppins", sans-serif;
 }
 
-.montserrat {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-}
 
 #cabecalho{
     position: relative;
@@ -51,7 +53,8 @@ body{
 }
 
 #nav2{
-    padding-left: 38%; /*empurra o login e cadastro para a direita*/
+    
+    padding-left: 40%; /*empurra o login e cadastro para a direita*/
 }
 
  #nav1 a, #nav2 a{
@@ -103,7 +106,7 @@ body{
 
 #texto_inicial{ 
     position: relative;
-    margin: 160px 0px 0px 100px;
+    margin: 140px 0px 0px 100px;
     color: #0A113F;
     font-family: "Montserrat", sans-serif;
 }
@@ -172,14 +175,15 @@ img{
 
 button{
     width: 35%;
-    height: 250px;
+    height: 200px;
     /* colocar margem*/
 }
 
 #botao_inicio a{
+    width: 600px;
     color: #FFFAFA;
     font-family: sans-serif;
-    font-size: 25px;
+    font-size: 35px;
     font-weight: bold;
 
     display: inline-flex;
@@ -200,14 +204,22 @@ button{
 }
 
 .botao_icon {
-  width: 80px;
-  height: 50px;
-  margin-left:12px;
+  width: 120px;
+  height: 90px;
+  margin: 0.5rem;;
 }
 
 
 /*Seção Vestibulares */
-.vestibular img{
+.vestibular_quadrada img{
+    position: relative;
+    width: 100px;
+    height: 100px;
+
+    float: left;
+}
+
+.vestibular_retangular img{
     position: relative;
     width: 100px;
     height: 100px;
@@ -227,10 +239,9 @@ button{
 
 #text_vest{
     color: #FFFAFA;
-    color: #FFFAFA;
-font-family: Poppins;
-font-size: 45px;
-font-style: normal;
-font-weight: 700;
-line-height: 58px; /* 111.538% */
+    font-family: Poppins;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 58px; /* 111.538% */
 }
