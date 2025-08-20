@@ -40,7 +40,7 @@ body {
 
 .content {
     background-color: white;
-    width: 820px;
+    width: 1000px;
     height: 70%;
     display: flex;
     justify-content: space-between;
@@ -72,18 +72,31 @@ body {
     left: 0;
 }
 
-.title-bem-vinda {
+h1{
     color: white;
     font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    
 }
-.primeira-descrição {
-    color: white;
+.azul-login{
+    color: #0A113F;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 5rem;
 }
-
-.segunda-descrição {
-    color: #ff4081;
+.azul-cadastro{
+    color: #0A113F;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 3rem;
 }
-
+.font-grande{
+    font-size: 16px;
+}
+.verde{
+    color: #8AF101;
+    background-color: #0A113F;
+}
 .primeiro-content {
     display: flex;
     text-align: center;
@@ -120,7 +133,7 @@ body {
 }
 
 .form input {
-    height: 45px;
+    height: 65px;
     width: 100%;
     border: none;
     background-color: #ecf0f1;
@@ -149,34 +162,34 @@ body {
     border-radius: 15px;
     text-transform: uppercase;
     color: white;
-    font-size: 16px;
-    padding: 13px;
+    font-size: 20px;
+    padding: 15px;
     cursor: pointer;
     font-weight: bold;
-    width: 160px;
+    width: 200px;
     align-self: center;
     transition: 1.5s;
     background-color: #0A113F;
     border: none;
-    margin-top: 1rem;
+    margin-top: 5rem;
     border: 3px solid transparent;
 }
 
 .btn-2 {
     border-radius: 15px;
     text-transform: uppercase;
-    color: #0A113F;
-    font-size: 16px;
-    padding: 10px;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
     cursor: pointer;
     font-weight: bold;
-    width: 160px;
+    width: 200px;
     align-self: center;
     transition: 1.5s;
-    background-color: white;
+    background-color: transparent;
     border: none;
-    margin-top: 1rem;
-    border: 3px solid transparent;
+    margin-top: 5rem;
+    border: 3px solid white;
 }
 
 .btn-2:hover {
@@ -191,11 +204,11 @@ body {
     border-radius: 15px;
     text-transform: uppercase;
     color: white;
-    font-size: 16px;
-    padding: 10px;
+    font-size: 20px;
+    padding: 15px;
     cursor: pointer;
     font-weight: bold;
-    width: 150px;
+    width: 200px;
     align-self: center;
     transition: 1.5s;
     background-color: #0A113F;
@@ -223,21 +236,18 @@ body {
 .primeiro-btn {
     border-radius: 15px;
     text-transform: uppercase;
-    color: #0A113F;
-    font-size: 16px;
-    padding: 10px;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
     cursor: pointer;
     font-weight: bold;
-    width: 150px;
+    width: 200px;
     align-self: center;
     transition: 1.5s;
-    background-color: white;
+    background-color: transparent;
     border: none;
-    margin-top: 1rem;
-    border: 3px solid transparent;
-}
-.verde{
-    color: #92FF00;
+    margin-top: 5rem;
+    border: 3px solid white;
 }
 .primeiro-btn:hover {
     background-color: transparent;
