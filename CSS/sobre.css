@@ -13,9 +13,6 @@
 body{
     background-color: #FFFAFA;
     font-family: "Poppins",sans-serif;
-    clear: left;
-
-
 }
 
 #cabecalho{
@@ -37,7 +34,6 @@ body{
 #navegação_principal{
     position: relative;
     display: flex;
-    
     width: 100%; /*alinhado de cima para baixo*/
 }
 
@@ -94,7 +90,6 @@ body{
     padding: 7px 15px;
     color:#0A113F;
     background: #92FF00;
-    clear: left;
 }
 
 /* Área de texto e imagem da página quem nós somos*/
@@ -123,7 +118,7 @@ body{
 
 
 #menino{
-    position: relative;
+    position:relative;
     width: 800px;
     height:700px ;
     top: -600px;
@@ -173,16 +168,24 @@ body{
   border: 2px solid #00FFFF; /* Borda ciano */
 }
 
-#flecha{
-    position: relative;
-    width: 120px ;
-    height: 120px ;
-    float: left;
-}
 
 /*Formatação do texto e simbolo dentro das caixas*/
+#flecha{
+    position: relative;
+    width: 100px ;
+    height: 100px ;
+    float:left;
+}
+
+.titulo{
+    text-align: left;
+}
 
 
+.mis{
+    text-align: left;
+
+}
 
 
 
