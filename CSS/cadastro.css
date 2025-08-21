@@ -7,7 +7,7 @@
 }
 body {
     font-family: "Poppins", sans-serif;
-    background-image: url("../imagens/background_login.png");
+    background-image: url("../Imagens/Cadastro/background_login.png");
     background-size: cover;   /* Faz preencher a tela */
     background-position: center; /* Centraliza */
     background-repeat: no-repeat; /* Não repete */

@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+CU:wght@100..400&family=Playwrite+RO:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Condensed+One&display=swap');
+/* inicio css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+/* Fim css reset */
+/* Inicio config fixa */
+body{
+    background-image: url("../Imagens/Patrocinadores/background-patrocinio.png");
+    background-size: cover;   /* Faz preencher a tela */
+    background-position: center; /* Centraliza */
+    background-repeat: no-repeat; /* Não repete */
+    font-family: "Poppins", sans-serif;
+}
+/* Fim config fixa */
+/* Inicio estilo header */
+#verde{
+    color: #8AF101;
+}
+#menu-sup{
+    background-color: #0A113F;
+    width: 100%;
+    height: 90px;
+}
+.logo-e-title{
+    width: 50px;
+}
+#logo{
+    margin-top: 15px;
+    width: 90px;
+}
+#title_logo{
+    margin-left: 120px;
+    margin-top: -50px;
+    font-size: 46px;
+    color: whitesmoke;
+    width: 30px;
+    font-family: "Poppins", sans-serif;
+}
+#btn-login{
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 1.5s;
+    background-color: transparent;
+    border: 3px solid whitesmoke;
+    padding: 15px;
+    margin-top: -60px;
+    height: 60px;
+    text-align: center;
+}
+#btn-login:hover{
+    background-color: transparent;
+    border-radius: 15px;
+    border: 3px solid whitesmoke;
+    color: whitesmoke;
+    box-shadow: 0 5px 10px whitesmoke;
+}
+#btn-cadastro{
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 1.5s;
+    background-color: transparent;
+    border: 3px solid #8AF101;
+    padding: 15px;
+    margin-top: -60px;
+    height: 60px;
+    text-align: center;
+}
+#btn-cadastro:hover{
+    background-color: transparent;
+    border-radius: 15px;
+    border: 3px solid #8AF101;
+    color: whitesmoke;
+    box-shadow: 0 5px 10px #8AF101;
+}
+.botoes-direita {
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+    margin-right: 3%;
+}
+/* Fim estilo header */
+/* Começo estilo principal */
+#principal{
+     width: 100%;
+    min-height: 90.7vh;
+    display: flex; /* Adiciona flexbox */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: space-between; /* Espaço entre as sections */
+    padding: 0 5%;
+}
+#imagem-principal{
+    margin-right: 5%;
+    height: 700px;
+    width: 45%;
+    float: right;
+}
+#imagem-principal img{
+    margin-top: -10%;
+    height: 840px;
+    
+}
+#texto-principal{
+    width: 45%;
+    height: 700px;
+    margin-left: 5%;
+}
+.titulo{
+    font-size: 46px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    margin-top: 3%;
+}
+.paragrafo{
+    font-size: 36px;
+    color: white;
+    margin-top: 12%;
+    font-family: "Poppins", sans-serif;
+}
+.description{
+    color: white;
+    font-size: 20px;
+    margin-top: 15%;
+}
+/* Fim estilo principal */
+
+
+
+/* RESET E CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.patrocinadores {
+    padding: 80px 20px;
+    background: #f8f9fa;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 80px;
+}
+
+.patrocinadores h2 {
+    font-size: 2.5rem;
+    color: #0A113F;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* CONTAINER PRINCIPAL */
+.carrossel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/* TRACK DO CARROSSEL */
+.carrossel-track {
+    display: flex;
+    animation: carrosselMove 30s linear infinite;
+    will-change: transform;
+}
+
+/* ITENS DO CARROSSEL */
+.carrossel-item {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 250px;
+    margin: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.carrossel-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* ANIMAÇÃO PRINCIPAL - ESSA É A CHAVE! */
+@keyframes carrosselMove {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-200px * 8 - 20px * 16)); /* 8 itens * 2 */
+    }
+}
+
+/* PAUSA NO HOVER */
+.carrossel-container:hover .carrossel-track {
+    animation-play-state: paused;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .carrossel-item {
+        width: 150px;
+        height: 100px;
+        margin: 0 15px;
+    }
+    
+    @keyframes carrosselMove {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-150px * 8 - 15px * 16)); }
+    }
+}
+
+@media (max-width: 480px) {
+    .carrossel-item {
+        width: 120px;
+        height: 80px;
+        margin: 0 10px;
+    }
+    
+    @keyframes carrosselMove {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-120px * 8 - 10px * 16)); }
+    }
+}
+
+
+.carrossel-track {
+    display: flex;
+    animation: carrosselSimple 20s linear infinite;
+}
+
+@keyframes carrosselSimple {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.carrossel-item {
+    min-width: 250px;
+    height: 250px;
+    margin: 0 20px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
