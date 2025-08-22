@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+CU:wght@100..400&family=Playwrite+RO:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Condensed+One&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: "Poppins", sans-serif;
+    background-image: url("../img-cadastro/background_novo.png");
+    width: 100%;
+    background-color: #0A113F;
+    background-size: cover;   /* Faz preencher a tela */
+    background-position: center; /* Centraliza */
+    background-repeat: no-repeat; /* Não repete */
+}
+
+/* Ocultar o segundo content inicialmente */
+.segundo-content {
+    display: none;
+}
+
+/* Mostrar quando a classe fazer-login-js estiver ativa */
+.fazer-login-js .segundo-content {
+    display: flex;
+}
+
+/* Ocultar o primeiro content quando fazer-login-js estiver ativo */
+.fazer-login-js .primeiro-content {
+    display: none;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;    
+}
+
+.content {
+    width: 1000px;
+    height: 70%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin-top: 14px;
+    border: 6px solid transparent; /* espessura da borda */
+    border-radius: 50px 300px 50px 300px;
+
+  /* cor interna + gradiente na borda */
+    background:
+    linear-gradient(#ccddf8, #d5d3d3) padding-box,
+    linear-gradient(0deg,#00e5e5,#ff11ff,#ffe62e) border-box;
+    background-clip: padding-box, border-box;
+    padding: 20px;
+     /* opcional: ajuste a cor interna (#fff) conforme seu layout */
+}
+
+.content::before {
+    content: "";
+    position: absolute;
+    background-color: #0A113F;
+    width: 42%;
+    height: 100%;
+    border-radius: 50px 300px 50px 300px;
+    left: 0;
+}
+
+h1{
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-size: 40px;
+    margin-right: 7%;
+}
+.azul-login{
+    color: #0A113F;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 5rem;
+}
+.azul-cadastro{
+    color: #0A113F;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 3rem;
+}
+.font-grande{
+    font-size: 16px;
+}
+.verde{
+    color: #8AF101;
+    background-color: #0A113F;
+}
+.primeiro-content {
+    display: flex;
+    text-align: center;
+    
+}
+
+.primeiro-content .segunda-coluna {
+    z-index: 11 ;
+}
+
+.primeira-coluna {
+    text-align: center;
+    width: 40%;
+    z-index: 1;
+}
+
+.segundo-content {
+    position: absolute;
+    
+}
+.segundo-content .primeira-coluna {
+    order: 2;
+    z-index: -1;
+}
+
+.segundo-content .segunda-coluna{
+    order: 1;
+    
+}   
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+
+.form input {
+    height: 65px;
+    width: 100%;
+    border: none;
+    background-color: #ecf0f1;
+    /* margin-top: 10px; */
+    box-shadow: 5px 5px 10px rgb(162, 162, 162);
+}
+.font-grande::placeholder{
+    position: relative;
+    text-align: center;
+    margin-left: 240px;
+}
+.esqueceu-senha {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 16px;
+    width: 160px;
+    margin-left: 150px;
+}
+
+.lembrar-senha {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: -34px;
+    margin-left: 8px;
+  font-size: 14px;
+  color: #0A113F; /* ajusta a cor conforme seu layout */
+  cursor: pointer;
+}
+
+.lembrar-senha input {
+  accent-color: #009dff ; /* cor do check (funciona nos navegadores mais novos) */
+  width: 20px;
+  height: 20px;
+}
+
+.label-input {
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 200px;
+    align-self: center;
+    transition: 1.5s;
+    background-color: #0A113F;
+    border: none;
+    margin-top: 5rem;
+    border: 3px solid transparent;
+}
+
+.btn-2 {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 200px;
+    align-self: center;
+    transition: 1.5s;
+    background-color: transparent;
+    border: none;
+    margin-top: 5rem;
+    border: 3px solid white;
+}
+
+.btn-2:hover {
+    background-color: transparent;
+    border-radius: 15px;
+    border: 3px solid white;
+    color: white;
+    box-shadow: 0 5px 10px white;
+}
+
+.btn-3 {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 200px;
+    align-self: center;
+    transition: 1.5s;
+    background-color: #0A113F;
+    border: none;
+    margin-top: 1rem;
+    border: 3px solid transparent;
+}
+
+.btn-3:hover {
+    background-color: transparent;
+    border-radius: 15px;
+    border: 3px solid #0A113F;
+    color: #0A113F;
+    box-shadow: 0 6px 12px rgba(10, 17, 63, 0.4);
+}
+
+.btn:hover {
+    background-color: transparent;
+    border-radius: 15px;
+    border: 3px solid #0A113F;
+    color: #0A113F;
+    box-shadow: 0 6px 12px rgba(10, 17, 63, 0.4);
+}
+
+.primeiro-btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 200px;
+    align-self: center;
+    transition: 1.5s;
+    background-color: transparent;
+    border: none;
+    margin-top: 5rem;
+    border: 3px solid white;
+}
+.primeiro-btn:hover {
+    background-color: transparent;
+    border-radius: 15px;
+    border: 3px solid white;
+    color: white;
+    box-shadow: 0 5px 10px white;
+}
+
+.segunda-coluna {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.segundo-title {
+    color: #0A113F;
+}
+
+.fazer-login-js .primeiro-content .primeira-coluna,
+.fazer-login-js .primeiro-content .segunda-coluna {
+    z-index: -100;
+}
+
+.fazer-login-js .segundo-content .segunda-coluna {
+    z-index: 100;
+}
+
+.fazer-login-js .segundo-content .primeira-coluna {
+    z-index: 1000;
+}
+
+.fazer-login-js .content::before {
+    left: 58%;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-radius: 50px 300px 50px 300px;
+    animation: slidelogin 1s;
+    z-index: 999;
+}
+
+.cadastro-js .content::before {
+    animation: slidecadastro 1s;
+
+    z-index: 999;
+}
+
+.cadastro-js .segundo-content .primeira-coluna,
+.cadastro-js .segundo-content .segunda-coluna {
+    z-index: -100;
+}
+
+.cadastro-js .primeiro-content .segunda-coluna {
+    z-index: 100;
+}
+
+.cadastro-js .primeiro-content .primeira-coluna {
+    z-index: 1000;
+}
+
+@keyframes slidelogin {
+
+    from {
+        left: 0%;
+        width: 45%;
+    }
+
+    25% {
+        left: 18%;
+        width: 45%;
+    }
+
+    50% {
+        left: 38%;
+        width: 50%;
+    }
+
+    75% {
+        left: 48%;
+        width: 42%;
+    }
+
+    to {
+        left: 58%;
+        width: 42%;
+    }
+}
+
+@keyframes slidecadastro {
+
+    from {
+        left: 60%;
+        width: 42%;
+    }
+
+    25% {
+        left: 48%;
+        width: 45%;
+    }
+
+    50% {
+        left: 38%;
+        width: 50%;
+    }
+
+    75% {
+        left: 18%;
+        width: 45%;
+    }
+
+    to {
+        left: 0;
+        width: 42%;
+    }
+}
