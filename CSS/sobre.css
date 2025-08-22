@@ -9,6 +9,112 @@
     border: 0;
 }
 
+:root {
+  --cor-principal: #0A113F;
+  --cor-fundo-clara: #FFFAFA;
+  --cor-destaque: #92FF00;
+  --fonte-poppins: "Poppins", sans-serif;
+  --fonte-montserrat: "Montserrat", sans-serif;
+}
+
+/* Inicio estilo header */
+#cabecalho{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 120px;
+    background-color: var(--cor-principal);
+}
+
+#verde{
+    color: #8AF101;
+}
+
+#logo{
+    margin-left: 50px;
+    width: 85px;
+}
+
+#title_logo{
+    margin: 25px;
+
+    font-size: 46px;
+    color: whitesmoke;
+    width: 30px;
+    font-family: "Poppins", sans-serif;
+}
+
+
+#nav1, #nav2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#nav1 {
+    position: relative;
+    float: left;
+    margin-left: 180px;
+
+    & a{
+        margin-right:20px;
+        margin-left: 20px;
+        color:#FFFAFA;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 700;
+
+    }
+}
+
+#nav2{
+    position: relative;
+    float: left;
+    margin-left: 10%;
+    padding-left: 0px; /*empurra o login e cadastro para a direita*/
+
+    & a{
+        color: #FFFAFA;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 700;
+
+    }
+}
+
+    
+#login a {
+    position: relative;
+    margin-right: 20px;
+    text-align: center;
+    display: inline;
+    height: 40px;
+
+    /*formato botão*/
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 7px 15px;
+    color: #FFFAFA;
+    background: transparent;
+}
+
+#cadastro a{
+    position: relative;
+    margin-right: 20px;
+    text-align: center;
+    display: inline;
+    height: 40px;
+
+    /*formato botão*/
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 7px 15px;
+    color: var(--cor-principal);
+    background: var(--cor-destaque);
+}
+
 
 /* Área de texto e imagem da página quem nós somos*/
 #bloco2{
