@@ -4,6 +4,7 @@
     padding: 0px;
     margin: 0px;
     border: 0px;
+    
 }
 
 :root {
@@ -17,6 +18,7 @@
 body{
     background-color:var(--cor-fundo-clara);
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 
 /* Inicio estilo header */
@@ -124,7 +126,7 @@ body{
     margin: auto;
     display: flex;
     flex-direction: row;
-    background-color: #d62d96;
+
     color: var(--cor-principal);
     font-family: "Montserrat", sans-serif;
     gap: 300px;
@@ -151,7 +153,7 @@ body{
 
     & .divisao1{
         margin: 76px;
-        background-color: yellowgreen;
+        
     }
 }
 
