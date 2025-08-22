@@ -126,69 +126,85 @@ body{
 }
 
 
-/*Missão, visão e valores formatação */
+/* Container que agrupa os 3 cartões */
 #valores {
   margin: 50px auto;
-  display: flex;
-  flex-direction: row;
-  justify-content: center; /* Centraliza os quadrados horizontalmente */
-  align-items: center;
-  gap: 25px; /* Adiciona um espaço fixo entre os quadrados */
-  clear: left;
-  margin-bottom: 100px; /* Espaçamento dos blocos*/
+  display: flex; /* Habilita o Flexbox */
+  flex-direction: row; /* Alinha os itens em uma linha */
+  justify-content: center; /* Centraliza os cartões horizontalmente */
+  gap: 25px; /* Adiciona um espaço fixo entre os cartões */
+  margin-bottom: 100px;
 }
 
+/* Container que agrupa os 3 cartões */
+#valores {
+    margin: 50px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 100px;
+}
 
-
-/*Estilo geral para os três quadrados */
+/* Estilo geral para os três cartões */
 .missao, .visao, .valores {
-  position: relative;
-  width: 450px;
-  height: 300px;
-  background-color: white; /* A cor bege do fundo */
-  border-radius: 20px;
-  box-shadow: 15px 20px 20px #808080;
-  padding: 30px;
-  box-sizing: border-box; /* Garante que o padding não aumente o tamanho da div */
-  align-items: center;
+    position: relative;
+    width: 450px;
+    height: 300px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 15px 20px 20px #808080;
+    padding: 30px;
+    box-sizing: border-box;
 }
 
+/* Estilo para os títulos */
+.titulo {
+    font-size: 30px;
+    margin-top: -10px;
+    margin-left: 120px;
 
+}
 
-/*Estilos específicos para as bordas coloridas */
+/* Estilo para os parágrafos */
+.mis {
+    justify-content: 40px;
+    margin-left: 120px;
+
+}
+
+/* Estilo para os ícones */
+.flecha{
+    width:100px ;
+    height: 80px ;
+    float: left;
+
+}
+.olho{
+    width:100px ;
+    height: 70px;
+    float: left;
+
+}
+
+.maos {
+    width: 90px;
+    height: 80px;
+    float: left;
+}
+
+/* Estilos específicos para as bordas coloridas */
 .missao {
-  border: 2px solid #92FF00; /* Borda verde */
+    border: 2px solid #92FF00;
 }
 
 .visao {
-  border: 2px solid #FF11FF; /* Borda rosa */
+    border: 2px solid #FF11FF;
 }
 
 .valores {
-  border: 2px solid #00FFFF; /* Borda ciano */
+    border: 2px solid #00FFFF;
 }
-
-
-/*Formatação do texto e simbolo dentro das caixas*/
-#flecha{
-    position: relative;
-    width: 100px ;
-    height: 100px ;
-    float:left;
-}
-
-.titulo{
-    text-align: left;
-}
-
-
-.mis{
-    text-align: left;
-
-}
-
-
-
 
 
 /*Imagens e fundadores*/
