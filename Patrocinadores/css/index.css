@@ -1,0 +1,516 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+CU:wght@100..400&family=Playwrite+RO:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Condensed+One&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* inicio css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+/* Fim css reset */
+
+/* Inicio config fixa */
+body{
+    background-image: url("../imagens/background-patrocinio.png");
+    background-size: cover;   /* Faz preencher a tela */
+    background-position: center; /* Centraliza */
+    background-repeat: no-repeat; /* Não repete */
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+}
+/* Fim config fixa */
+
+/* Inicio estilo header */
+#verde{
+    color: #8AF101;
+}
+#menu-sup{
+    background-color: #0A113F;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    z-index: 100;
+}
+.logo-e-title{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+#logo{
+    width: 60px;
+    height: auto;
+}
+#title_logo{
+    font-size: 32px;
+    color: whitesmoke;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+}
+#btn-login{
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    background-color: transparent;
+    border: 2px solid whitesmoke;
+    padding: 10px 15px;
+    height: auto;
+}
+#btn-login:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+#btn-cadastro{
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: whitesmoke;
+    font-size: 14px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    background-color: transparent;
+    border: 2px solid #8AF101;
+    padding: 10px 15px;
+    height: auto;
+}
+#btn-cadastro:hover{
+    background-color: rgba(138, 241, 1, 0.1);
+    box-shadow: 0 5px 15px rgba(138, 241, 1, 0.3);
+}
+.botoes-direita {
+    display: flex;
+    justify-content: end;
+    gap: 15px;
+}
+/* Fim estilo header */
+
+/* Começo estilo principal - CORREÇÃO DA RESPONSIVIDADE */
+#principal{
+    width: 100%;
+    min-height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+    gap: 40px;
+}
+
+#imagem-principal{
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagem-principal img{
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+}
+
+#texto-principal{
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    font-size: 32px;
+    color: white;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.paragrafo{
+    font-size: 18px;
+    color: white;
+    margin: 20px 0;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.6;
+    max-width: 90%;
+}
+
+.description{
+    color: white;
+    font-size: 16px;
+    margin-top: 25px;
+    margin-left: 10vh;
+    font-style: italic;
+}
+
+/* Classes para controle de quebra de linha */
+.desktop-only {
+    display: none;
+}
+
+/* Fim estilo principal */
+
+.patrocinadores {
+    padding: 60px 0px;
+    background: #fffafa;
+    text-align: center;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+
+.patrocinadores h2 {
+    font-size: 28px;
+    color: #0A113F;
+    margin-bottom: 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+/* CONTAINER PRINCIPAL */
+.carrossel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+}
+
+/* TRACK DO CARROSSEL */
+.carrossel-track {
+    display: flex;
+    animation: carrosselMove 30s linear infinite;
+    will-change: transform;
+    height: 100%;
+}
+
+/* ITENS DO CARROSSEL */
+.carrossel-item {
+    flex: 0 0 auto;
+    width: 180px;
+    height: 180px;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 15px;
+}
+
+.carrossel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: transparent;
+    border: 2px solid #c4c4c4;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+/* ANIMAÇÃO PRINCIPAL */
+@keyframes carrosselMove {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-200px * 8));
+    }
+}
+
+/* PAUSA NO HOVER */
+.carrossel-container:hover .carrossel-track {
+    animation-play-state: paused;
+}
+
+/* RESPONSIVO */
+@media (min-width: 768px) {
+    #menu-sup {
+        padding: 0 40px;
+    }
+    
+    #title_logo {
+        font-size: 38px;
+    }
+    
+    #btn-login, #btn-cadastro {
+        font-size: 16px;
+        padding: 12px 20px;
+    }
+    
+    #principal {
+        flex-direction: row;
+        text-align: left;
+        padding: 40px;
+        justify-content: space-between;
+        gap: 40px;
+    }
+    
+    #texto-principal {
+        width: 50%;
+        align-items: flex-start;
+        margin-bottom: 0;
+    }
+    
+    #imagem-principal {
+        width: 45%;
+        margin: 0;
+        justify-content: flex-end;
+    }
+    
+    .titulo {
+        font-size: 42px;
+    }
+    
+    .paragrafo {
+        font-size: 20px;
+        max-width: 100%;
+        text-align: left;
+    }
+    
+    .description {
+        font-size: 18px;
+    }
+    
+    .patrocinadores h2 {
+        font-size: 32px;
+    }
+    
+    .carrossel-container {
+        height: 250px;
+    }
+    
+    .carrossel-item {
+        width: 220px;
+        height: 220px;
+        margin: 0 30px;
+    }
+    
+    .desktop-only {
+        display: inline;
+    }
+}
+
+@media (min-width: 1024px) {
+    #principal {
+        padding: 60px 80px;
+        gap: 60px;
+    }
+    
+    .titulo {
+        font-size: 48px;
+    }
+    
+    .paragrafo {
+        font-size: 22px;
+    }
+    
+    #logo {
+        width: 80px;
+    }
+    
+    #title_logo {
+        font-size: 46px;
+    }
+    
+    .patrocinadores {
+        padding: 80px 0px;
+    }
+    
+    .patrocinadores h2 {
+        font-size: 36px;
+    }
+    
+    #imagem-principal img {
+        max-height: 500px;
+    }
+}
+
+@media (max-width: 480px) {
+    #menu-sup {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .logo-e-title {
+        margin-bottom: 15px;
+    }
+    
+    .botoes-direita {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #btn-login, #btn-cadastro {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+    
+    .titulo {
+        font-size: 26px;
+    }
+    
+    .paragrafo {
+        font-size: 16px;
+    }
+    
+    .carrossel-container {
+        height: 150px;
+    }
+    
+    .carrossel-item {
+        width: 140px;
+        height: 140px;
+        margin: 0 15px;
+    }
+    
+    @keyframes carrosselMove {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-140px * 8)); }
+    }
+}
+/* Começo seção doação */
+.container {
+            width: 100%;
+            height: 300px;
+            text-align: center;
+            background-color: white;
+        }
+        .verde {
+            color: #8AF101;
+        }
+        
+        .titulo-section {
+            font-size: 32px;
+            margin-bottom: 40px;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            line-height: 1.4;
+        }
+        
+        .botoes-doacao {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+        
+        .botao-doacao {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 25px;
+            width: 220px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .botao-doacao:hover {
+            background: rgba(138, 241, 1, 0.15);
+            border-color: #8AF101;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .botao-doacao.destaque {
+            background: rgba(138, 241, 1, 0.2);
+            border-color: #8AF101;
+        }
+        
+        .valor {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: #8AF101;
+        }
+        
+        .moeda {
+            font-size: 20px;
+            vertical-align: super;
+            margin-right: 2px;
+        }
+        
+        .texto-botao {
+            font-size: 16px;
+            margin-top: 10px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        
+        .periodo {
+            font-size: 14px;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+        
+        .botao-outro {
+            border: 2px dashed rgba(255, 255, 255, 0.4);
+            border-radius: 15px;
+            padding: 25px;
+            width: 220px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: rgba(138, 241, 1, 0.2);
+            border-color: #8AF101;
+        }
+        
+        .botao-outro:hover {
+            border-color: #8AF101;
+            background: rgba(138, 241, 1, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .texto-outro {
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+        .icone-coracao {
+            color: #ff3366;
+            margin: 0 5px;
+        }
+        
+        @media (max-width: 768px) {
+            .botoes-doacao {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .botao-doacao, .botao-outro {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .titulo-section {
+                font-size: 28px;
+            }
+        }
+/* Fim seção doação */
+.doacao{
+    font-size: 40px;
+        font-family: "Poppins", sans-serif;
+        color: #8AF101;
+        margin-left: 80px;
+}
+/* Começo do rodapé */
+
+/* Fim do rodapé */
