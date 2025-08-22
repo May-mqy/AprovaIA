@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fffafa;
+    font-family: "Poppins", sans-serif;
+}
+
+
+h1{
+    font-size: 50px;
+    color: #0A113F;
+}
+
+/* INÍCIO FORMATAÇÃO DO ACCORDIN*/
+#container{
+    width: 95vw ;
+    height: auto ;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.accordion{
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    box-shadow: 5px;
+    box-shadow: 5px 5px 5px rgba(0,0,0, 0.1);
+}
+
+.accordion-header{
+    width: 100%;
+    border: none;
+    background-color: transparent;
+    color: #0A113F;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.accordion-header span{
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.accordion-body{
+    color: #0A113F;
+    font-size: 25px;
+    opacity: 0;
+    height: 0;
+
+}
+
+.accordion-body.active{
+    height: 100%;
+    opacity: 1;
+    padding: 5px 0px;
+    transition: opacity .3s;
+
+}
+
+
+
+.arrow{
+    transition: transform 2.s linear;
+}
+
+
+
+.accordion:has(.active) .arrow{
+    transform:rotate(180deg);
+}
+
+/* FIM DA FORMATAÇÃO DO ACCORDIN*/
+
+
+/*RODAPÉ*/
+
+footer{
+    /* Ocupa a largura total da tela */
+    width: 100%;
+    /* Define uma altura fixa para o rodapé */
+    height: 400px;
+    background-color: #0A113F;
+    /* Garante que o rodapé ocupe a largura da tela */
+    margin-top: auto; 
+}
