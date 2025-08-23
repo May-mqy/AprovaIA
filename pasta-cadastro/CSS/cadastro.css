@@ -165,7 +165,7 @@ h1{
 }
 
 .lembrar-senha input {
-  accent-color: #009dff ; /* cor do check (funciona nos navegadores mais novos) */
+  accent-color: #91d4e0 ; /* cor do check (funciona nos navegadores mais novos) */
   width: 20px;
   height: 20px;
 }
@@ -300,15 +300,6 @@ h1{
     z-index: 1000;
 }
 
-.fazer-login-js .content::before {
-    left: 58%;
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    border-radius: 50px 300px 50px 300px;
-    animation: slidelogin 1s;
-    z-index: 999;
-}
-
 .cadastro-js .content::before {
     animation: slidecadastro 1s;
 
@@ -381,5 +372,263 @@ h1{
     to {
         left: 0;
         width: 42%;
+    }
+}
+
+
+
+/* Responsividade - Tablets */
+@media screen and (max-width: 1024px) {
+    .content {
+        max-width: 900px;
+        border-radius: 30px 200px 30px 200px;
+        padding: 15px;
+    }
+    
+    .content::before {
+        border-radius: 30px 200px 30px 200px;
+    }
+    .font-grande::placeholder{
+    position: relative;
+    text-align: center;
+    margin-left: 180px;
+}
+    .azul-login {
+    color: #0A113F;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    
+}
+    h1 {
+        margin-left: 6%;
+    }
+    
+    .primeira-coluna {
+        width: 45%;
+        padding: 15px;
+    }
+    
+    .segunda-coluna {
+        width: 55%;
+        padding: 15px;
+    }
+
+    .btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 200px;
+    align-self: center;
+    transition: 1.5s;
+    background-color: #0A113F;
+    border: none;
+    margin-top: 5rem;
+    border: 3px solid transparent;
+}
+
+.btn-2 {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 200px;
+    align-self: center;
+    transition: 1.5s;
+    background-color: transparent;
+    border: none;
+    margin-top: 5rem;
+    border: 3px solid white;
+}
+
+.btn-2:hover {
+    background-color: transparent;
+    border-radius: 15px;
+    border: 3px solid white;
+    color: white;
+    box-shadow: 0 5px 10px white;
+}
+
+.btn-3 {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 200px;
+    align-self: center;
+    transition: 1.5s;
+    background-color: #0A113F;
+    border: none;
+    margin-top: 1rem;
+    border: 3px solid transparent;
+}
+
+.btn-3:hover {
+    background-color: transparent;
+    border-radius: 15px;
+    border: 3px solid #0A113F;
+    color: #0A113F;
+    box-shadow: 0 6px 12px rgba(10, 17, 63, 0.4);
+}
+
+.btn:hover {
+    background-color: transparent;
+    border-radius: 15px;
+    border: 3px solid #0A113F;
+    color: #0A113F;
+    box-shadow: 0 6px 12px rgba(10, 17, 63, 0.4);
+}
+
+.primeiro-btn {
+    border-radius: 15px;
+    text-transform: uppercase;
+    color: white;
+    font-size: 20px;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 200px;
+    align-self: center;
+    transition: 1.5s;
+    background-color: transparent;
+    border: none;
+    margin-top: 5rem;
+    border: 3px solid white;
+}
+.primeiro-btn:hover {
+    background-color: transparent;
+    border-radius: 15px;
+    border: 3px solid white;
+    color: white;
+    box-shadow: 0 5px 10px white;
+}
+
+    
+}
+
+
+/* Animações responsivas */
+@media screen and (min-width: 769px) {
+    .fazer-login-js .primeiro-content .primeira-coluna,
+    .fazer-login-js .primeiro-content .segunda-coluna {
+        z-index: -100;
+    }
+
+    .fazer-login-js .segundo-content .segunda-coluna {
+        z-index: 100;
+    }
+
+    .fazer-login-js .segundo-content .primeira-coluna {
+        z-index: 1000;
+    }
+
+    .fazer-login-js .content::before {
+        left: 58%;
+        animation: slidelogin 1s;
+        z-index: 999;
+    }
+
+    .cadastro-js .content::before {
+        animation: slidecadastro 1s;
+        z-index: 999;
+    }
+
+    .cadastro-js .segundo-content .primeira-coluna,
+    .cadastro-js .segundo-content .segunda-coluna {
+        z-index: -100;
+    }
+
+    .cadastro-js .primeiro-content .segunda-coluna {
+        z-index: 100;
+    }
+
+    .cadastro-js .primeiro-content .primeira-coluna {
+        z-index: 1000;
+    }
+
+    @keyframes slidelogin {
+        from {
+            left: 0%;
+            width: 42%;
+        }
+        25% {
+            left: 18%;
+            width: 45%;
+        }
+        50% {
+            left: 38%;
+            width: 50%;
+        }
+        75% {
+            left: 48%;
+            width: 42%;
+        }
+        to {
+            left: 58%;
+            width: 42%;
+        }
+    }
+
+    @keyframes slidecadastro {
+        from {
+            left: 58%;
+            width: 42%;
+        }
+        25% {
+            left: 48%;
+            width: 45%;
+        }
+        50% {
+            left: 38%;
+            width: 50%;
+        }
+        75% {
+            left: 18%;
+            width: 45%;
+        }
+        to {
+            left: 0;
+            width: 42%;
+        }
+    }
+}
+
+/* Orientação landscape para smartphones */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .container {
+        min-height: 100vh;
+        padding: 10px;
+    }
+    
+    .content {
+        min-height: auto;
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: clamp(16px, 4vw, 24px);
+        margin-bottom: 10px;
+    }
+    
+    .azul-login, .azul-cadastro {
+        margin-bottom: 1rem;
+    }
+    
+    .btn, .btn-2, .btn-3, .primeiro-btn {
+        margin-top: 1rem;
+        padding: 8px 15px;
+    }
+    
+    .primeira-coluna, .segunda-coluna {
+        padding: 10px 0;
     }
 }

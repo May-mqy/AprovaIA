@@ -18,24 +18,31 @@
 
 /* Inicio config fixa */
 body{
-    background-image: url("../Imagens/Patrocinadores/background-patrocinio.png");
-    background-size: cover;   /* Faz preencher a tela */
-    background-position: center; /* Centraliza */
-    background-repeat: no-repeat; /* Não repete */
+    background-image: url("./imagens/background-patrocinio.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     font-family: var(--fonte-poppins);
     overflow-x: hidden;
 }
 /* Fim config fixa */
 
-
-
 /* Inicio estilo header */
 #cabecalho{
     display: flex;
-    flex-direction: row;
+    justify-content: space-between; /* Distribui espaço entre os elementos */
+    align-items: center; /* Centraliza verticalmente */
     width: 100%;
     height: 120px;
     background-color: var(--cor-principal);
+
+}
+
+/* Container da logo e título */
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* Pequena margem à esquerda */
 }
 
 #verde{
@@ -43,127 +50,157 @@ body{
 }
 
 #logo{
-    margin-left: 50px;
     width: 85px;
+    margin-right: 15px; /* Espaço entre logo e título */
 }
 
 #title_logo{
-    margin: 25px;
-
     font-size: 46px;
     color: whitesmoke;
-    width: 30px;
     font-family: "Poppins", sans-serif;
+    white-space: nowrap; /* Impede quebra de linha */
+    margin-right: 0px;
 }
 
-
-#nav1, #nav2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
+/* Navegação central */
 #nav1 {
-    position: relative;
-    float: left;
-    margin-left: 180px;
+    display: flex;
 
     & a{
-        margin-right:20px;
-        margin-left: 20px;
-        color:#FFFAFA;
+        margin: 0 15px; /* Margem entre os links */
+        color: #FFFAFA;
         text-decoration: none;
         font-size: 25px;
         font-weight: 700;
+        white-space: nowrap; /* Impede quebra de linha */
+    }
 
+    & a:hover{
+        color: var(--cor-destaque);
+        transition: color 0.3s ease;
     }
 }
 
+/* Navegação do botão de cadastro */
 #nav2{
-    position: relative;
-    float: left;
-    margin-left: 10%;
-    padding-left: 0px; /*empurra o login e cadastro para a direita*/
+    margin-right: 20px; /* Pequena margem à direita */
+
+    & ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
 
     & a{
         color: #FFFAFA;
         text-decoration: none;
         font-size: 25px;
         font-weight: 700;
-
     }
 }
 
-    
-#login a {
-    position: relative;
-    margin-right: 20px;
-    text-align: center;
-    display: inline;
-    height: 40px;
-
-    /*formato botão*/
-    border: 1px solid white;
-    border-radius: 50px;
-    padding: 7px 15px;
-    color: #FFFAFA;
-    background: transparent;
-}
-
+/* Estilo do botão de cadastro */
 #cadastro a{
-    position: relative;
-    margin-right: 20px;
-    text-align: center;
-    display: inline;
-    height: 40px;
-
-    /*formato botão*/
     border: 1px solid white;
     border-radius: 50px;
-    padding: 7px 15px;
+    padding: 10px 20px;
     color: var(--cor-principal);
     background: var(--cor-destaque);
+    transition: all 0.3s ease;
 }
 
-#btn-cadastro:hover{
-    background-color: rgba(138, 241, 1, 0.1);
+#cadastro a:hover{
+    background-color: rgba(138, 241, 1, 0.8);
     box-shadow: 0 5px 15px rgba(138, 241, 1, 0.3);
+    transform: translateY(-2px);
 }
-.botoes-direita {
-    display: flex;
-    justify-content: end;
-    gap: 15px;
-}
+
 /* Fim estilo header */
 
-/* Começo estilo principal - CORREÇÃO DA RESPONSIVIDADE */
+/* Media query para responsividade */
+@media (max-width: 1400px) {
+    #title_logo {
+        display: none; /* Esconde o título AprovaIA */
+    }
+    
+    .logo-container {
+        margin-left: 5px; /* Margem bem pequena à esquerda da logo */
+    }
+    
+    #logo {
+        margin-right: 0; /* Remove a margem direita da logo quando não há título */
+    }
+    
+    #nav1 {
+        margin-left: 15px; /* Diminui o espaço entre logo e links */
+    }
+}
+
+@media (max-width: 1200px) {
+    #nav1 a {
+        font-size: 20px;
+        margin: 0 10px;
+    }
+    
+    #nav2 a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1100px) {
+
+    .texto-completo {
+        display: none !important; /* Esconde "CADASTRO/LOGIN" */
+    }
+    
+    .texto-reduzido {
+        display: inline !important; /* Mostra apenas "CADASTRO" */
+    }
+
+    #cadastro a:hover{
+    background-color: rgba(138, 241, 1, 0.8);
+    box-shadow: 0 5px 15px rgba(138, 241, 1, 0.3);
+    transform: translateY(-2px);
+}
+}
+
+/* Por padrão, mostra o texto completo */
+.texto-reduzido {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    #cabecalho {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+    
+    .logo-container {
+        margin: 0 0 15px 0;
+    }
+    
+    #nav1 {
+        margin: 0 0 15px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #nav2 {
+        margin: 0;
+    }
+}
+
+/* Começo estilo principal - RESPONSIVO */
 #principal{
     width: 100%;
-    min-height: calc(100vh - 90px);
+    min-height: calc(100vh - 120px); /* Ajustado para altura do header */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    justify-content: center;
-    padding: 40px 20px;
     text-align: center;
-    gap: 40px;
-}
-
-#imagem-principal{
-    width: 100%;
-    max-width: 500px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#imagem-principal img{
-    width: 100%;
-    height: auto;
-    max-height: 400px;
-    object-fit: contain;
+    padding: 20px;
+    gap: 40px; /* Espaço entre texto e imagem */
 }
 
 #texto-principal{
@@ -175,19 +212,34 @@ body{
     align-items: center;
 }
 
+#imagem-principal{
+    width: 100%;
+    max-width: 700px; /* Aumentado de 500px para 700px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#imagem-principal img{
+    width: 100%;
+    max-width: 650px; /* Aumentado de 450px para 650px */
+    height: auto;
+    object-fit: contain;
+}
+
 .titulo{
-    font-size: 32px;
     color: white;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
     margin-bottom: 20px;
     line-height: 1.2;
+    font-size: 58px !important;
 }
 
 .paragrafo{
-    font-size: 18px;
+    font-size: 28px !important;
     color: white;
-    margin: 20px 0;
+    margin: 30px 0;
     font-family: "Poppins", sans-serif;
     line-height: 1.6;
     max-width: 90%;
@@ -195,15 +247,183 @@ body{
 
 .description{
     color: white;
-    font-size: 16px;
+    font-size: 24px !important;
     margin-top: 25px;
-    margin-left: 10vh;
     font-style: italic;
+    font-weight: 300;
 }
 
-/* Classes para controle de quebra de linha */
-.desktop-only {
-    display: none;
+/* ===== RESPONSIVIDADE ===== */
+
+/* Tablets grandes e desktops pequenos - até 1200px */
+@media (max-width: 1200px) {
+    #principal {
+        padding: 20px 15px;
+        gap: 30px;
+    }
+    
+    .titulo {
+        font-size: 42px;
+    }
+    
+    .paragrafo {
+        font-size: 20px;
+        margin: 25px 0;
+    }
+    
+    .description {
+        font-size: 15px;
+    }
+    
+    #imagem-principal {
+        max-width: 550px; /* Ainda grande, mas menor que desktop */
+    }
+    
+    #imagem-principal img {
+        max-width: 500px;
+    }
+}
+
+/* Tablets - até 992px */
+@media (max-width: 992px) {
+    #principal {
+        flex-direction: column;
+        min-height: auto;
+        padding: 40px 20px;
+        text-align: center;
+    }
+    
+    #texto-principal {
+        order: 1;
+        max-width: 100%;
+    }
+    
+    #imagem-principal {
+        order: 2;
+        max-width: 400px;
+        margin-top: 30px;
+    }
+    
+    .titulo {
+        font-size: 36px;
+        margin-bottom: 15px;
+    }
+    
+    .paragrafo {
+        font-size: 18px;
+        margin: 20px 0;
+        max-width: 100%;
+    }
+    
+    .description {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+}
+
+/* Tablets pequenos - até 768px */
+@media (max-width: 768px) {
+    #principal {
+        padding: 30px 15px;
+    }
+    
+    .titulo {
+        font-size: 32px;
+        line-height: 1.1;
+    }
+    
+    .paragrafo {
+        font-size: 16px;
+        margin: 18px 0;
+        line-height: 1.5;
+    }
+    
+    .description {
+        font-size: 13px;
+        margin-top: 15px;
+    }
+    
+    #imagem-principal {
+        max-width: 350px;
+        margin-top: 25px;
+    }
+}
+
+/* Smartphones grandes - até 576px */
+@media (max-width: 576px) {
+    #principal {
+        padding: 20px 10px;
+    }
+    
+    .titulo {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+    
+    .paragrafo {
+        font-size: 15px;
+        margin: 15px 0;
+        line-height: 1.4;
+    }
+    
+    .description {
+        font-size: 12px;
+        margin-top: 12px;
+    }
+    
+    #imagem-principal {
+        max-width: 300px;
+        margin-top: 20px;
+    }
+}
+
+/* Smartphones pequenos - até 480px */
+@media (max-width: 480px) {
+    #principal {
+        min-height: calc(100vh - 120px);
+        padding: 15px 8px;
+    }
+    
+    .titulo {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .paragrafo {
+        font-size: 14px;
+        margin: 12px 0;
+        line-height: 1.3;
+    }
+    
+    .description {
+        font-size: 11px;
+        margin-top: 10px;
+    }
+    
+    #imagem-principal {
+        max-width: 250px;
+        margin-top: 15px;
+    }
+}
+
+/* Smartphones muito pequenos - até 320px */
+@media (max-width: 320px) {
+    .titulo {
+        font-size: 20px;
+    }
+    
+    .paragrafo {
+        font-size: 13px;
+        margin: 10px 0;
+    }
+    
+    .description {
+        font-size: 10px;
+    }
+    
+    #imagem-principal {
+        max-width: 200px;
+    }
 }
 
 /* Fim estilo principal */
@@ -280,81 +500,13 @@ body{
 }
 
 /* RESPONSIVO */
-@media (min-width: 768px) {
-    #menu-sup {
-        padding: 0 40px;
-    }
-    
-    #title_logo {
-        font-size: 38px;
-    }
-    
-    #btn-login, #btn-cadastro {
-        font-size: 16px;
-        padding: 12px 20px;
-    }
-    
-    #principal {
-        flex-direction: row;
-        text-align: left;
-        padding: 40px;
-        justify-content: space-between;
-        gap: 40px;
-    }
-    
-    #texto-principal {
-        width: 50%;
-        align-items: flex-start;
-        margin-bottom: 0;
-    }
-    
-    #imagem-principal {
-        width: 45%;
-        margin: 0;
-        justify-content: flex-end;
-    }
-    
-    .titulo {
-        font-size: 42px;
-    }
-    
-    .paragrafo {
-        font-size: 20px;
-        max-width: 100%;
-        text-align: left;
-    }
-    
-    .description {
-        font-size: 18px;
-    }
-    
-    .patrocinadores h2 {
-        font-size: 32px;
-    }
-    
-    .carrossel-container {
-        height: 250px;
-    }
-    
-    .carrossel-item {
-        width: 220px;
-        height: 220px;
-        margin: 0 30px;
-    }
-    
-    .desktop-only {
-        display: inline;
-    }
-}
 
-@media (min-width: 1024px) {
+
+
+@media (min-width: 1500px) {
     #principal {
         padding: 60px 80px;
         gap: 60px;
-    }
-    
-    .titulo {
-        font-size: 48px;
     }
     
     .paragrafo {
@@ -378,55 +530,42 @@ body{
     }
     
     #imagem-principal img {
-        max-height: 500px;
+        width: 100%;
+        max-height: 1000px;
     }
 }
 
-@media (max-width: 480px) {
-    #menu-sup {
-        flex-direction: column;
-        height: auto;
-        padding: 15px;
-        gap: 15px;
+
+@media (min-width: 1024px) {
+    #principal {
+        padding: 60px 80px;
+        gap: 60px;
+    }
+
+    
+    #logo {
+        width: 80px;
     }
     
-    .logo-e-title {
-        margin-bottom: 15px;
+    #title_logo {
+        font-size: 46px;
     }
     
-    .botoes-direita {
-        flex-wrap: wrap;
-        justify-content: center;
+    .patrocinadores {
+        padding: 80px 0px;
     }
     
-    #btn-login, #btn-cadastro {
-        font-size: 12px;
-        padding: 8px 12px;
+    .patrocinadores h2 {
+        font-size: 36px;
     }
     
-    .titulo {
-        font-size: 26px;
-    }
-    
-    .paragrafo {
-        font-size: 16px;
-    }
-    
-    .carrossel-container {
-        height: 150px;
-    }
-    
-    .carrossel-item {
-        width: 140px;
-        height: 140px;
-        margin: 0 15px;
-    }
-    
-    @keyframes carrosselMove {
-        0% { transform: translateX(0); }
-        100% { transform: translateX(calc(-140px * 8)); }
+    #imagem-principal img {
+        width: 150%;
+        max-height: 1000px;
     }
 }
+
+
 /* Começo seção doação */
 .container {
             width: 100%;
@@ -538,21 +677,7 @@ body{
             margin: 0 5px;
         }
         
-        @media (max-width: 768px) {
-            .botoes-doacao {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .botao-doacao, .botao-outro {
-                width: 100%;
-                max-width: 300px;
-            }
-            
-            .titulo-section {
-                font-size: 28px;
-            }
-        }
+        
 /* Fim seção doação */
 .doacao{
     font-size: 40px;
