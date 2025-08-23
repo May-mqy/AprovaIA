@@ -147,6 +147,7 @@ body{
         font-size: 25px;
         font-weight: 600;
         line-height: normal;
+        overflow-wrap: break-word;
     } 
 
     & .texto1{
@@ -256,7 +257,7 @@ button{
 .secao_vestibular{
     position: relative;
     width: 100%;
-    height:250px;
+    height:220px;
     margin-top: 100px;
     background-color: var(--cor-principal);
     text-align: center;
@@ -318,41 +319,204 @@ button{
 
 /* Definições de cores para facilitar a manutenção */
 :root {
-  --rosa: #d62d96;
-  --ciano: #3b82f6;
-  --verde: #5cb85c;
-  --cinza-texto: #6b7280;
+  --rosa: #FF11FF;
+  --ciano: #00E5E5;
+  --verde: #8AF104;
+  --sombra: rgba(0, 0, 0, 0.25);
+  --opacidade: 0.25;
+
 }
 
-.ferramentas-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    margin-top: 50px;
-    padding: 20px;
-    background-color: #f8f9fa; 
+        .ferramentas-container {
+            position: relative;
+            width: auto;
+            height: auto;
+            margin-top: 80px;
+            padding: 50px;
+            background-color: var(--cor-fundo-clara);
+
+           & #titulo_ferramentas{
+                width: 100%;
+                color: var(--cor-principal);
+                font-size: 50px;
+                font-weight: 700;
+                margin-bottom: 20px;
+                text-align: center;
+                margin-bottom: 60px;
+            }
+        }
+
+
+        .containers {
+            display: inline-flex;
+            gap: 40px;
+            justify-content: space-between;
+            margin-left: 4%;
+            
+            }
+            
+            .card{
+                display: flex;
+                flex-direction: column;
+                width: 450px;
+                height: 700px;
+                background-color: var(--cor-fundo-clara);
+                border-radius: 15px;
+                padding: 20px;
+                box-shadow: 7px 4px 4px var(--sombra);
+                text-align: left;
+                color: var(--cor-principal);
+                
+                & .card-tab{
+                    width: 380px;
+                    height: 60px;
+                    font-size: 30px;
+                    font-weight: bold;
+                    padding: 8px 10px;
+                    border-radius: 7px;
+                    position: relative;
+                    margin: 0px auto 0px auto;
+                    display: flex;
+                    text-align: center;
+                    align-items: center;
+                    justify-content: center;
+
+                }
+                
+                & .tab-pink{
+                    background-color: var(--rosa);
+                }
+
+                & .tab-azul{
+                    background-color: var(--ciano);
+                }
+
+                & .tab-verde{
+                    background-color: var(--verde);
+                }
+
+                & .card-content{
+                    padding: 20px;
+                    
+                    & h3{
+                        font-size: 35px;
+                        margin-bottom: 40px;
+                    }
+                    
+                    & p{
+                        font-size: 25px;
+                        line-height: 30px;
+                        font-weight: 400;
+                        width: 90%;
+                    }
+
+                    & .Recursos{
+                        width: auto;
+                        height: auto;
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 120px;
+                        
+                        
+                        & .recurso{
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            margin-bottom: 5px;
+                            font-weight: 700;
+                            font-size: 30px;
+                            
+                        }
+                    }
+                }
+        }
+
+.card-pink{
+    border: 5px solid var(--rosa);
 }
 
-.titulo_ferramentas{
-    width: 100%;
-    color: var(--cor-principal);
-    font-family: "Poppins", sans-serif;
-    font-size: 36px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-align: center;
+.card-blue{
+    border: 5px solid var(--ciano);
 }
 
-.caixas-container {
-    width: 110%;
+.card-green{
+    border: 5px solid var(--verde);
+}
+
+.recurso-lista{
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: row;
 }
 
-.texto_caixa {
-    width: 30%;
+.recurso-texto{
+    font-size: 24px;
+    margin-top: 7px;
+    margin-left: 5px;
+
+    & li{
+        margin-bottom: 10px;
+        padding: 5px;
+    }
 }
+
+.recurso-check{
+    display: flex;
+    height: 50px;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    justify-content: space-between;
+
+    & img{
+        width: 35px;
+        height: 40px;
+        margin-right: 10px;
+    }
+}
+
+#recurso-item{
+    margin-top: 15px;
+}
+
+/*Seção Dúvidas*/
+    .secao_duvidas{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        color: var(--cor-principal);
+        background-color: yellow;
+        width: 90%;
+        height: 1200px;
+        margin: auto;
+
+        & h3{
+            width:70%;
+            font-size: 50px;
+            text-align: center;
+            margin: 0px auto;
+        }
+
+        .pergunta {
+            margin-top: 150px;
+            font-size: 35px;
+            margin-left:50px;
+            width: auto;
+            font-weight: 650;
+            
+        }
+        
+        & p{
+            margin: 0px 200px 0px 100px;
+            font-size: 24px;
+            width: 90%;
+            width: auto;
+            font-weight: 400;
+        }
+    }
+
+.destaque3{
+  color: #8AF101;
+  font-weight: bold; /* deixa em negrito */
+}
+
+
