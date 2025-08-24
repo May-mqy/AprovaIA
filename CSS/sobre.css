@@ -6,6 +6,113 @@
     margin: 0;
     padding: 0;
     border: 0;
+    font-family: var(--fonte-poppins);
+}
+
+:root {
+  --cor-principal: #0A113F;
+  --cor-fundo-clara: #FFFAFA;
+  --cor-destaque: #92FF00;
+  --fonte-poppins: "Poppins", sans-serif;
+  --fonte-montserrat: "Montserrat", sans-serif;
+}
+
+/* Inicio estilo header */
+#cabecalho{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 120px;
+    background-color: var(--cor-principal);
+}
+
+#verde{
+    color: #8AF101;
+}
+
+#logo{
+    margin-left: 50px;
+    width: 85px;
+}
+
+#title_logo{
+    margin: 25px;
+
+    font-size: 46px;
+    color: whitesmoke;
+    width: 30px;
+    font-family: "Poppins", sans-serif;
+}
+
+
+#nav1, #nav2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#nav1 {
+    position: relative;
+    float: left;
+    margin-left: 180px;
+
+    & a{
+        margin-right:20px;
+        margin-left: 20px;
+        color:#FFFAFA;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 700;
+
+    }
+}
+
+#nav2{
+    position: relative;
+    float: left;
+    margin-left: 10%;
+    padding-left: 0px; /*empurra o login e cadastro para a direita*/
+
+    & a{
+        color: #FFFAFA;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 700;
+
+    }
+}
+
+    
+#login a {
+    position: relative;
+    margin-right: 20px;
+    text-align: center;
+    display: inline;
+    height: 40px;
+
+    /*formato botão*/
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 7px 15px;
+    color: #FFFAFA;
+    background: transparent;
+}
+
+#cadastro a{
+    position: relative;
+    margin-right: 20px;
+    text-align: center;
+    display: inline;
+    height: 40px;
+
+    /*formato botão*/
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 7px 15px;
+    color: var(--cor-principal);
+    background: var(--cor-destaque);
 }
 
 /*Corpo do site*/
@@ -289,10 +396,101 @@ h2{
 
 
 
-/*RODAPÉ*/
-footer{
-    position: relative;
-    width: 100%;
-    height: 500px ;
-    background-color: #0A113F;
+/* Seção Footer Geral*/
+.footer {
+  background-color: #0B1340;
+  color: white;
+  padding: 40px 60px;
+}
+
+/* ----- Container Principal ----- */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* ----- Cada coluna do footer ----- */
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+/* ----- Logo ----- */
+.logo {
+    color: var(--cor-fundo-clara);
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    margin: 0;
+}
+
+.logo-img {
+    height: 40px;
+}
+
+/* ----- Títulos das seções ----- */
+.footer-title {
+    margin: 15px 0 8px;
+    font-weight: bold;
+}
+
+/* ----- Redes Sociais ----- */
+.social-icons {
+    display: flex;
+    gap: 12px;
+    font-size: 25px;
+}
+
+.social-icons a {
+    color: white;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #70E000;
+}
+
+/* ----- Listas ----- */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 6px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #70E000;
+}
+
+/* ----- Parte de baixo ----- */
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #70E000;
+}
+
+.destaque3{
+    color: #8AF101;
+    font-weight: bold; /* deixa em negrito */
 }
