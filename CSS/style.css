@@ -4,7 +4,7 @@
     padding: 0px;
     margin: 0px;
     border: 0px;
-    
+    box-sizing: border-box;
 }
 
 :root {
@@ -133,30 +133,31 @@ body{
  .divisao1{
         margin-top: 150px;
         margin-left: 75px;
-    }
-
-
-    & p{
-        width: 590px;
-        height: 36px;
-
-        color: var(--cor-principal);
-        text-align: justify;
+       
+        & p{
+            width: 590px;
+            height: 36px;
     
-        margin-bottom: 10px;
-        font-size: 25px;
-        font-weight: 600;
-        line-height: normal;
-        overflow-wrap: break-word;
-    } 
-
-    & .texto1{
-    width: 600px;
-    height: 150px;
-    margin-top: 20px;
-    font-weight: 400;
-
+            color: var(--cor-principal);
+            text-align: justify;
+        
+            margin-bottom: 10px;
+            font-size: 25px;
+            font-weight: 600;
+            line-height: normal;
+            overflow-wrap: break-word;
+        } 
+    
+        & .texto1{
+        width: 600px;
+        height: 150px;
+        margin-top: 20px;
+        font-weight: 400;
+    
+        }
     }
+
+
 
 h2{
     width: 700px;
@@ -219,13 +220,14 @@ button{
     display: flex;
     flex-direction: column;
     width: 100%;
+    margin-left: 50px;
     background-color: var(--cor-fundo-clara);
 
    & .bolona {
         width: 1000px;
         height: 1000px;
 
-        margin-top: 150px;
+        margin-top: 200px;
         background-color: var(--cor-principal);
         border-radius: 1038px;
     
@@ -254,16 +256,15 @@ button{
 /*Seção Vestibulares */
 
 
-.secao_vestibular{
+#vestibular{
     position: relative;
     width: 100%;
-    height:220px;
-    margin-top: 100px;
+    height:250px;
+    margin-top: -230px;
     background-color: var(--cor-principal);
     text-align: center;
-    overflow-y: scroll;
+    
 }
-
 
 
 #text_vest{
@@ -277,10 +278,10 @@ button{
 
 .alinha{
     position: relative;
-    width: 100%;
+    width: 90%;
     height:auto;
+    margin: auto;
     margin-top: 20px;
-    margin-left: 145px;
 
     display: flex;
     text-align: center;
@@ -291,16 +292,16 @@ button{
 
 .vestibular_quadrada img{
     position: relative;
-    width: 110px;
-    height: 110px;
+    width: 100px;
+    height: 100px;
     float: left;
     z-index: 1;
 }
 
 .vestibular_retangular img{
     position: relative;
-    width: 200px;
-    height: 70px;
+    width: 180px;
+    height: 60px;
 
     float: left;
     z-index: 1;
@@ -358,8 +359,8 @@ button{
             .card{
                 display: flex;
                 flex-direction: column;
-                width: 450px;
-                height: 700px;
+                width: 500px;
+                height: auto;
                 background-color: var(--cor-fundo-clara);
                 border-radius: 15px;
                 padding: 20px;
@@ -368,7 +369,7 @@ button{
                 color: var(--cor-principal);
                 
                 & .card-tab{
-                    width: 380px;
+                    width: 430px;
                     height: 60px;
                     font-size: 30px;
                     font-weight: bold;
@@ -415,7 +416,7 @@ button{
                         height: auto;
                         display: flex;
                         flex-direction: column;
-                        margin-top: 120px;
+                        margin-top: 100px;
                         
                         
                         & .recurso{
@@ -426,6 +427,9 @@ button{
                             font-weight: 700;
                             font-size: 30px;
                             
+                        }
+                        & #recurso-verde{
+                            margin-top: -70px;
                         }
                     }
                 }
@@ -479,44 +483,229 @@ button{
 }
 
 /*Seção Dúvidas*/
-    .secao_duvidas{
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        color: var(--cor-principal);
-        background-color: yellow;
-        width: 90%;
-        height: 1200px;
-        margin: auto;
+/* FAQ (Frequently Asked Questions / Perguntas Frequentes). */
+.faq {
+    max-width: 1500px;
+    margin: 40px auto;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    margin-bottom: 120px;
+}
 
-        & h3{
-            width:70%;
-            font-size: 50px;
-            text-align: center;
-            margin: 0px auto;
-        }
-
-        .pergunta {
-            margin-top: 150px;
-            font-size: 35px;
-            margin-left:50px;
-            width: auto;
-            font-weight: 650;
-            
-        }
-        
-        & p{
-            margin: 0px 200px 0px 100px;
-            font-size: 24px;
-            width: 90%;
-            width: auto;
-            font-weight: 400;
-        }
-    }
+.faq h2 {
+    width: 100%;
+    font-size: 40px;
+    font-weight: bold;
+    color: #0d0d2d;
+}
 
 .destaque3{
-  color: #8AF101;
-  font-weight: bold; /* deixa em negrito */
+    color: var(--cor-destaque);
+    font-weight: bold;
 }
 
 
+.faq-item {
+    margin-top: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+    color: var(--cor-principal);
+    background: none;
+    width: 100%;
+    font-size: 30px;
+    border: none;
+    padding: 12px 0;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.faq-question:hover {
+    color: var(--cor-destaque);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+}
+
+.faq-answer p {
+    padding: 10px 0;
+    color: var(--cor-principal);
+    line-height: 1.5;
+    font-size: 25px;
+}
+
+/*Seção Patrocinadores*/
+.secao_patrocinadores{
+    position: relative;
+    color: var(--cor-principal);
+    background-color: var(--cor-fundo-clara);
+    width: 100%;
+    margin: auto;
+    height: 400px;
+
+    & h2{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+        
+    }
+}
+
+/* CONTAINER PRINCIPAL */
+.carrossel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 200px;
+}
+
+/* TRACK DO CARROSSEL */
+.carrossel-track {
+    display: flex;
+    animation: carrosselMove 30s linear infinite;
+    will-change: transform;
+    height: 100%;
+}
+
+/* ITENS DO CARROSSEL */
+.carrossel-item {
+    flex: 0 0 auto;
+    width: 180px;
+    height: 180px;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 15px;
+}
+
+.carrossel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background-color: transparent;
+    border: 2px solid #c4c4c4;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+    padding: 10px;
+}
+
+/* ANIMAÇÃO PRINCIPAL */
+@keyframes carrosselMove {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-200px * 8));
+    }
+}
+
+/* PAUSA NO HOVER */
+.carrossel-container:hover .carrossel-track {
+    animation-play-state: paused;
+}
+
+/*Fim seção Patrocinadores
+
+/* Seção Footer Geral*/
+.footer {
+    background-color: #0B1340;
+    color: white;
+    padding: 30px 50px;
+}
+
+/* ----- Container Principal ----- */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* ----- Cada coluna do footer ----- */
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+/* ----- Logo ----- */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    margin: 0;
+}
+
+.logo-img {
+    height: 40px;
+}
+
+/* ----- Títulos das seções ----- */
+.footer-title {
+    margin: 15px 0 8px;
+    font-weight: bold;
+}
+
+/* ----- Redes Sociais ----- */
+.social-icons {
+    display: flex;
+    gap: 12px;
+    font-size: 40px;
+}
+
+.social-icons a {
+    color: white;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #70E000;
+}
+
+/* ----- Listas ----- */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 6px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #70E000;
+}
+
+/* ----- Parte de baixo ----- */
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: #70E000;
+}

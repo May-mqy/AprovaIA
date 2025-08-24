@@ -59,3 +59,14 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener('error', function(e) {
     console.error('Erro no carrossel:', e.error);
 });
+
+
+//Politicas animação
+const accordions = document.querySelectorAll('.accordion');
+
+accordions.forEach(accordion =>{
+    accordion.addEventListener('click', () =>{
+        const body=accordion.querySelector('.accordion-body');
+        body.classList.toggle('active')
+    })
+})
