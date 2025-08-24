@@ -6,7 +6,8 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-family: var(--fonte-poppins);
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 :root {
@@ -17,33 +18,40 @@
   --fonte-montserrat: "Montserrat", sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 /* Inicio estilo header */
 #cabecalho{
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 120px;
+    min-height: 120px;
+    padding: 15px 50px;
     background-color: var(--cor-principal);
 }
 
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
 #verde{
     color: #8AF101;
 }
 
 #logo{
-    margin-left: 50px;
     width: 85px;
+    height: auto;
 }
 
 #title_logo{
-    margin: 25px;
-
     font-size: 46px;
     color: whitesmoke;
-    width: 30px;
     font-family: "Poppins", sans-serif;
 }
-
 
 #nav1, #nav2 {
     display: flex;
@@ -55,166 +63,34 @@
 
 #nav1 {
     position: relative;
-    float: left;
-    margin-left: 180px;
-
-    & a{
-        margin-right:20px;
-        margin-left: 20px;
-        color:#FFFAFA;
-        text-decoration: none;
-        font-size: 25px;
-        font-weight: 700;
-
-    }
-}
-
-#nav2{
-    position: relative;
-    float: left;
-    margin-left: 10%;
-    padding-left: 0px; /*empurra o login e cadastro para a direita*/
-
-    & a{
-        color: #FFFAFA;
-        text-decoration: none;
-        font-size: 25px;
-        font-weight: 700;
-
-    }
-}
-
-    
-#login a {
-    position: relative;
-    margin-right: 20px;
-    text-align: center;
-    display: inline;
-    height: 40px;
-
-    /*formato botão*/
-    border: 1px solid white;
-    border-radius: 50px;
-    padding: 7px 15px;
-    color: #FFFAFA;
-    background: transparent;
-}
-
-#cadastro a{
-    position: relative;
-    margin-right: 20px;
-    text-align: center;
-    display: inline;
-    height: 40px;
-
-    /*formato botão*/
-    border: 1px solid white;
-    border-radius: 50px;
-    padding: 7px 15px;
-    color: var(--cor-principal);
-    background: var(--cor-destaque);
-}
-
-/*Corpo do site*/
-
-:root{
-  --cor-principal: #0A113F;
-  --cor-fundo-clara: #FFFAFA;
-  --cor-destaque: #92FF00;
-  --sombra-padrao: 5px 5px 15px #808080;
-  --fonte-poppins: "Poppins", sans-serif;
-  --fonte-montserrat: "Montserrat", sans-serif;
-}
-
-
-
-body{
-    position: relative;
-    color: #0A113F;
-    font-family: "Poppins", sans-serif;
-    text-align: left;
-}
-main{
-    max-width: 1500px;
-    min-width: 1051px;
-    margin:auto;
-}
-
-
-/* Inicio estilo header */
-#cabecalho{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 120px;
-    background-color: #0A113F;
-}
-
-#verde{
-    color: #8AF101;
-}
-
-#logo{
     margin-left: 50px;
-    width: 85px;
 }
 
-#title_logo{
-    margin: 25px;
-    font-size: 46px;
-    color: whitesmoke;
-    width: 30px;
-    font-family: "Poppins", sans-serif;
-}
-
-
-#nav1, #nav2 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-#nav1 {
-    position: relative;
-    float: left;
-    margin-left: 180px;
-
-    & a{
-        margin-right:20px;
-        margin-left: 20px;
-        color:#FFFAFA;
-        text-decoration: none;
-        font-size: 25px;
-        font-weight: 700;
-
-    }
+#nav1 a{
+    margin: 0 20px;
+    color:#FFFAFA;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
 }
 
 #nav2{
     position: relative;
-    float: left;
-    margin-left: 10%;
-    padding-left: 0px; /*empurra o login e cadastro para a direita*/
+    margin-left: 20px;
+}
 
-    & a{
-        color: #FFFAFA;
-        text-decoration: none;
-        font-size: 25px;
-        font-weight: 700;
-
-    }
+#nav2 a{
+    color: #FFFAFA;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 700;
 }
 
 #login a {
-    position: relative;
     margin-right: 20px;
     text-align: center;
-    display: inline;
+    display: inline-block;
     height: 40px;
-
-    /*formato botão*/
     border: 1px solid white;
     border-radius: 50px;
     padding: 7px 15px;
@@ -223,81 +99,72 @@ main{
 }
 
 #cadastro a{
-    position: relative;
-    margin-right: 20px;
     text-align: center;
-    display: inline;
+    display: inline-block;
     height: 40px;
-
-    /*formato botão*/
     border: 1px solid white;
     border-radius: 50px;
     padding: 7px 15px;
     color: var(--cor-principal);
     background: var(--cor-destaque);
 }
-/*Fim da HEADER*/
-
-
-
-
 
 /* Área de texto e imagem da página quem nós somos*/
-#bloco2{
-
-    width: 100%;
-    height: 700px;
-    background-color: #1cb233;
-    color: white;
-    clear: left;
-    padding-left: 90px ;
-    padding-right: 90px;
-    box-sizing: border-box;
-
+#bloco2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  min-height: 851px;
+  padding: 0 50px;
+  background-color: #0A113F;
+  color: #FFFAFA;
+  box-sizing: border-box;
 }
 
-#titulo{
-  font-size: 50px;
-  font-weight: bold;
-  margin-bottom: 60px;
-  clear: left;
+.texto {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  width: 40%;
+  font-size: 37px;
 }
 
-#texto2{
-    font-size: 25px;
-    line-height: 1.5;
-    clear: left;
+#titulo {
+  font-size: 46px;
 }
 
-
-#menino{
-    position:relative;
-    width: 750px;
-    height:650px ;
-    top: -600px;
-    left: 900px;
+#texto2 {
+  font-size: 26px;
+  line-height: 1.6;
 }
 
+.menino img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+}
 
 /* Container que agrupa os 3 cartões */
 #valores {
+  margin: 50px auto;
   display: flex;
-  flex-wrap: wrap;
-  justify-content:center ;
-  gap: 1.5rem;
-  margin-top: 7%;
-  
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 100px;
+  padding: 0 50px;
+  max-width: 1400px;
 }
-
 
 /* Estilo geral para os três cartões */
 .missao, .visao, .valores {
     position: relative;
     width: 450px;
-    height: 300px;
+    min-height: 300px;
     background-color: white;
     border-radius: 20px;
-    box-shadow: 15px 20px 20px #808080;
+    box-shadow: 15px 20px 20px rgba(128, 128, 128, 0.2);
     padding: 30px;
     box-sizing: border-box;
 }
@@ -307,28 +174,25 @@ main{
     font-size: 30px;
     margin-top: -10px;
     margin-left: 120px;
-
 }
 
 /* Estilo para os parágrafos */
 .mis {
-    justify-content: 40px;
     margin-left: 120px;
-
+    line-height: 1.5;
 }
 
 /* Estilo para os ícones */
 .flecha{
-    width:100px ;
-    height: 80px ;
+    width:100px;
+    height: 80px;
     float: left;
-
 }
+
 .olho{
-    width:100px ;
+    width:100px;
     height: 70px;
     float: left;
-
 }
 
 .maos {
@@ -350,51 +214,40 @@ main{
     border: 2px solid #00FFFF;
 }
 
-
 /*Imagens e fundadores*/
-
 #fundadores{
-    position: relative;
-    display: flex; /* Habilita o flexbox */
-    flex-direction: row; /* Alinha os itens em linha */
-    justify-content: center; /* Centraliza os itens na horizontal */
-    align-items: center; /* Alinha os itens no centro */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 150px;
-    text-align: center; /*alinha os textos no centro*/
+    text-align: center;
     font-size: 30px;
-    margin-bottom: 100px; /* Adiciona espaçamento abaixo de toda a seção */
+    margin-bottom: 50px;
 }
 
 h2{
     text-align: center;
     color: #0A113F;
     font-size: 35px;
-    height: 100px;
-    clear: left;
+    margin: 50px 0;
 }
-
-
 
 #fundadores2{
-    position: relative;
-    display: flex; /* Habilita o flexbox */
-    flex-direction: row; /* Alinha os itens em linha */
-    justify-content: center; /* Centraliza os itens na horizontal */
-    align-items: center; /* Alinha os itens no centro */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 150px;
-    text-align: center; /*alinha os textos no centro*/
+    text-align: center;
     font-size: 30px;
-    margin-bottom: 100px; /* Adiciona espaçamento abaixo de toda a seção */
+    margin-bottom: 100px;
 }
 
-
-
-
-
-
-
-
-
+.Gabriel img, .Gustavo img, .Ketlyn img, .Kevin img, .Mayara img {
+    width: 200px;
+    height: auto;
+}
 
 /* Seção Footer Geral*/
 .footer {
@@ -429,6 +282,7 @@ h2{
 
 .logo-img {
     height: 40px;
+    margin-right: 10px;
 }
 
 /* ----- Títulos das seções ----- */
@@ -468,6 +322,7 @@ h2{
     color: white;
     text-decoration: none;
     transition: 0.3s;
+    font-size: 20px;
 }
 
 .footer-section ul li a:hover {
@@ -477,8 +332,13 @@ h2{
 /* ----- Parte de baixo ----- */
 .footer-bottom {
     margin-top: 30px;
+    text-align: center;
     font-size: 20px;
     line-height: 1.6;
+}
+
+.footer-bottom p {
+    margin: 8px 0;
 }
 
 .footer-bottom a {
@@ -492,5 +352,420 @@ h2{
 
 .destaque3{
     color: #8AF101;
-    font-weight: bold; /* deixa em negrito */
+    font-weight: bold;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 1800px) {
+    #title_logo {
+        font-size: 40px;
+    }
+    
+    #nav1 a {
+        font-size: 20px;
+        margin: 0 15px;
+    }
+    
+    #nav2 a {
+        font-size: 20px;
+    }
+    
+    .texto {
+        gap: 60px;
+    }
+    
+    #titulo {
+        font-size: 32px;
+    }
+    
+    #texto2 {
+        font-size: 18px;
+    }
+    
+    .menino img {
+        max-width: 600px;
+    }
+}
+
+@media (max-width: 1600px) {
+    #cadastro a {
+        padding: 7px 10px;
+        font-size: 18px;
+    }
+    
+    #login a {
+        font-size: 18px;
+    }
+    
+    .footer-section {
+        font-size: 26px;
+    }
+    
+    .footer-section ul li a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1400px) {
+    #cabecalho {
+        padding: 15px 30px;
+    }
+    
+    #title_logo {
+        font-size: 36px;
+    }
+    
+    #nav1 {
+        margin-left: 30px;
+    }
+    
+    #nav1 a {
+        font-size: 18px;
+        margin: 0 12px;
+    }
+    
+    #bloco2 {
+        padding: 0 30px;
+        min-height: 700px;
+    }
+    
+    .texto {
+        gap: 40px;
+    }
+    
+    #titulo {
+        font-size: 28px;
+    }
+    
+    #texto2 {
+        font-size: 16px;
+    }
+    
+    .menino img {
+        max-width: 500px;
+    }
+    
+    #valores {
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0 30px;
+    }
+    
+    .missao, .visao, .valores {
+        width: 100%;
+        max-width: 400px;
+        min-height: 280px;
+    }
+    
+    .titulo {
+        font-size: 26px;
+    }
+    
+    .mis {
+        font-size: 16px;
+    }
+    
+    #fundadores, #fundadores2 {
+        gap: 100px;
+    }
+    
+    .Gabriel img, .Gustavo img, .Ketlyn img, .Kevin img, .Mayara img {
+        width: 150px;
+    }
+    
+    .footer {
+        padding: 40px 30px;
+    }
+    
+    .footer-section {
+        font-size: 22px;
+    }
+    
+    .footer-title {
+        font-size: 24px;
+    }
+    
+    .footer-section ul li a {
+        font-size: 16px;
+    }
+    
+    .footer-bottom {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #title_logo {
+        font-size: 32px;
+    }
+    
+    #nav1 a {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+    
+    #nav2 a {
+        font-size: 16px;
+    }
+    
+    #bloco2 {
+        flex-direction: column;
+        padding: 60px 30px;
+        text-align: center;
+    }
+    
+    .texto {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    .menino img {
+        max-width: 400px;
+    }
+    
+    #fundadores, #fundadores2 {
+        gap: 70px;
+        font-size: 24px;
+    }
+    
+    .Gabriel img, .Gustavo img, .Ketlyn img, .Kevin img, .Mayara img {
+        width: 120px;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1000px) {
+    #cabecalho {
+        flex-direction: column;
+        padding: 15px 20px;
+        min-height: auto;
+    }
+    
+    .logo-container {
+        margin-bottom: 15px;
+    }
+    
+    #nav1, #nav2 {
+        margin-left: 0;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    #nav1 {
+        margin-bottom: 15px;
+    }
+    
+    #nav1 a {
+        margin: 5px 8px;
+        font-size: 14px;
+    }
+    
+    #login, #cadastro {
+        margin: 5px;
+    }
+    
+    #login a, #cadastro a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    
+    #bloco2 {
+        padding: 40px 20px;
+    }
+    
+    .texto {
+        gap: 30px;
+    }
+    
+    #titulo {
+        font-size: 24px;
+    }
+    
+    #texto2 {
+        font-size: 14px;
+    }
+    
+    .menino img {
+        max-width: 300px;
+    }
+    
+    #valores {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+    
+    .missao, .visao, .valores {
+        width: 100%;
+        max-width: 350px;
+        min-height: 250px;
+        padding: 20px;
+    }
+    
+    .titulo {
+        font-size: 22px;
+        margin-left: 0;
+        text-align: center;
+        margin-top: 10px;
+    }
+    
+    .mis {
+        margin-left: 0;
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .flecha, .olho, .maos {
+        float: none;
+        display: block;
+        margin: 0 auto;
+        width: 70px;
+        height: 60px;
+    }
+    
+    h2 {
+        font-size: 28px;
+        margin: 30px 0;
+    }
+    
+    #fundadores, #fundadores2 {
+        flex-wrap: wrap;
+        gap: 40px;
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+    
+    .Gabriel, .Gustavo, .Ketlyn, .Kevin, .Mayara {
+        flex: 0 0 calc(50% - 40px);
+    }
+    
+    .Gabriel img, .Gustavo img, .Ketlyn img, .Kevin img, .Mayara img {
+        width: 100px;
+    }
+    
+    .footer {
+        padding: 30px 20px;
+    }
+    
+    .footer-section {
+        font-size: 18px;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+    
+    .logo {
+        font-size: 28px;
+    }
+    
+    .logo-img {
+        height: 30px;
+    }
+    
+    .footer-title {
+        font-size: 20px;
+    }
+    
+    .social-icons {
+        font-size: 20px;
+    }
+    
+    .footer-section ul li a {
+        font-size: 14px;
+    }
+    
+    .footer-bottom {
+        font-size: 14px;
+    }
+}
+
+/* Esconder o texto AprovaIA em telas maiores que 1800px */
+@media (min-width: 1800px) {
+    #title_logo {
+        display: none;
+    }
+    
+    .logo-container {
+        width: 85px;
+    }
+}
+
+/* Alterar texto do botão login em telas menores que 1600px */
+
+
+/* Ajustes para telas muito grandes */
+@media (min-width: 2000px) {
+    #cabecalho, #bloco2, #valores, .footer {
+        padding-left: calc(50% - 900px);
+        padding-right: calc(50% - 900px);
+    }
+}
+
+/* padrão: mostra */
+#title_logo { display: inline; }
+
+/* < 1700px: esconde */
+@media (max-width: 1700px) {
+  #title_logo { display: none !important; }
+}
+/* esconde o texto original do link */
+@media (max-width: 1600px) {
+  #cadastro a {
+    position: relative;
+    color: transparent;          /* esconde o texto */
+  }
+  
+}
+@media (max-width: 1200px) {
+
+    
+    #nav2 a {
+        font-size: 20px;
+    }
+}
+@media (max-width: 768px) {
+
+    
+    #nav2 {
+        margin: 0;
+    }
+}
+@media (max-width: 1100px) {
+
+    .texto-completo {
+        display: none !important; /* Esconde "CADASTRO/LOGIN" */
+    }
+    
+    .texto-reduzido {
+        display: inline !important; /* Mostra apenas "CADASTRO" */
+    }
+
+    #cadastro a:hover{
+    background-color: rgba(138, 241, 1, 0.8);
+    box-shadow: 0 5px 15px rgba(138, 241, 1, 0.3);
+    transform: translateY(-2px);
+}
+}
+/* Por padrão, mostra o texto completo */
+.texto-reduzido {
+    display: none;
+}
+
+#cadastro a{
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    color: var(--cor-principal);
+    background: var(--cor-destaque);
+    transition: all 0.3s ease;
+}
+
+#cadastro a:hover{
+    background-color: rgba(138, 241, 1, 0.8);
+    box-shadow: 0 5px 15px rgba(138, 241, 1, 0.3);
+    transform: translateY(-2px);
 }
