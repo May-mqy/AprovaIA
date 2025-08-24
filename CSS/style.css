@@ -12,7 +12,6 @@
   --cor-fundo-clara: #FFFAFA;
   --cor-destaque: #92FF00;
   --fonte-poppins: "Poppins", sans-serif;
-  --fonte-montserrat: "Montserrat", sans-serif;
 }
 
 body{
@@ -21,7 +20,7 @@ body{
     overflow-x: hidden;
 }
 
-/* Inicio estilo header */
+/* Inicio estilo Header/ Cabeçalho */
 #cabecalho{
     display: flex;
     flex-direction: row;
@@ -55,6 +54,10 @@ body{
     justify-content: center;
     align-items: center;
     height: 100%;
+
+    & a:hover{
+        color: var(--cor-destaque);
+    }
 }
 
 #nav1 {
@@ -70,6 +73,7 @@ body{
         text-decoration: none;
         font-size: 25px;
         font-weight: 700;
+        transition: 0.3s;
 
     }
 }
@@ -115,6 +119,7 @@ body{
     text-align: center;
     display: inline;
     height: 40px;
+    transition: all 0.3s ease;
     
     /*formato botão*/
     border: 1px solid white;
@@ -124,6 +129,11 @@ body{
     background: var(--cor-destaque);
 }
 
+#cadastro a:hover{
+    box-shadow: var(--cor-destaque);
+    color: var(--cor-principal);
+    transform: translateY(-2px);
+}
 /* Primeira divisão, Texto inicial */
 #texto_inicial{ 
     width: 100%;
@@ -374,6 +384,7 @@ button{
             gap: 40px;
             justify-content: space-between;
             margin-left: 4%;
+            flex-direction: row;
             
             }
             
@@ -390,7 +401,7 @@ button{
                 color: var(--cor-principal);
                 
                 & .card-tab{
-                    width: 430px;
+                    width: 400px;
                     height: 60px;
                     font-size: 30px;
                     font-weight: bold;
@@ -640,10 +651,10 @@ button{
 
 /*Fim seção Patrocinadores
 
-/* Seção Footer Geral*/
+/* Seção Rodapé Footer Geral*/
 .footer {
-    background-color: #0B1340;
-    color: white;
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo-clara);
     padding: 30px 50px;
 }
 
@@ -693,7 +704,7 @@ button{
 }
 
 .social-icons a:hover {
-    color: #70E000;
+    color: var(--cor-destaque);
 }
 
 /* ----- Listas ----- */
@@ -714,7 +725,7 @@ button{
 }
 
 .footer-section ul li a:hover {
-    color: #70E000;
+    color: var(--cor-destaque);
 }
 
 /* ----- Parte de baixo ----- */
@@ -730,7 +741,7 @@ button{
 }
 
 .footer-bottom a:hover {
-    color: #70E000;
+    color: var(--cor-destaque);
 }
 
 

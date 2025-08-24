@@ -7,102 +7,135 @@
     font-family: "Poppins", sans-serif;
 }
 
+:root {
+  --cor-principal: #0A113F;
+  --cor-fundo-clara: #FFFAFA;
+  --cor-destaque: #92FF00;
+  --fonte-poppins: "Poppins", sans-serif;
+}
+
 body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #f8f9fa; /* Um branco levemente acinzentado */
+    background-color: var(--cor-fundo-clara);
 }
 
 /* --- INÍCIO HEADER --- */
-.header {
-    width: 100%;
-    background-color: #0B1340;
-    padding: 15px 60px;
+/* Inicio estilo Header/ Cabeçalho */
+#cabecalho{
     display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 120px;
+    background-color: var(--cor-principal);
+}
+
+#verde{
+    color: #8AF101;
+}
+
+#logo{
+    margin-left: 50px;
+    width: 85px;
+}
+
+#title_logo{
+    margin: 25px;
+
+    font-size: 46px;
+    color: whitesmoke;
+    width: 30px;
+    font-family: "Poppins", sans-serif;
+}
+
+
+#nav1, #nav2 {
+    display: flex;
+    flex-direction: row;
     justify-content: center;
-}
-
-.navbar {
-    width: 100%;
-    max-width: 1400px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    height: 100%;
+
+    & a:hover{
+        color: var(--cor-destaque);
+    }
 }
 
-.navbar .logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-    font-size: 28px;
-    font-weight: 700;
+#nav1 {
+    position: relative;
+    float: left;
+    margin-left: 10%;
+    margin-right: 20%;
+
+    & a{
+        margin-right:20px;
+        margin-left: 20px;
+        color:#FFFAFA;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 700;
+        transition: 0.3s;
+
+    }
 }
 
-.logo-img {
+#nav2{
+    position: relative;
+    float: left;
+    
+    padding-left: 0px; /*empurra o login e cadastro para a direita*/
+
+    & a{
+        color: #FFFAFA;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 700;
+
+    }
+}
+
+    
+#login a {
+    position: relative;
+    margin-right: 20px;
+    text-align: center;
+    display: inline;
     height: 40px;
-    margin-right: 8px;
+
+    /*formato botão*/
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 7px 15px;
+    color: #FFFAFA;
+    background: transparent;
 }
 
-.destaque-logo {
-    color: #7FE423; /* Cor verde do botão */
+.texto-reduzido {
+        display: none !important; /* Esconde "ENTRAR" por padrão */
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 35px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    font-size: 16px;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #7FE423;
-}
-
-.nav-buttons {
-    display: flex;
-    gap: 15px;
-}
-
-.btn-login, .btn-cadastro {
-    padding: 10px 22px;
-    border: 2px solid;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
+#cadastro a{
+    position: relative;
+    margin-right: 20px;
+    text-align: center;
+    display: inline;
+    height: 40px;
     transition: all 0.3s ease;
+    
+    /*formato botão*/
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 7px 15px;
+    color: var(--cor-principal);
+    background: var(--cor-destaque);
 }
 
-.btn-login {
-    background-color: transparent;
-    border-color: white;
-    color: white;
+#cadastro a:hover{
+    box-shadow: var(--cor-destaque);
+    color: var(--cor-principal);
+    transform: translateY(-2px);
 }
-
-.btn-login:hover {
-    background-color: white;
-    color: #0B1340;
-}
-
-.btn-cadastro {
-    background-color: #7FE423;
-    border-color: #7FE423;
-    color: #0B1340;
-}
-
-.btn-cadastro:hover {
-    background-color: #6cbf1e;
-    border-color: #6cbf1e;
-}
-/* --- FIM HEADER --- */
 
 #container {
     flex: 1; /* Faz o container principal ocupar o espaço restante */
@@ -175,81 +208,88 @@ h1 {
 }
 /* --- FIM DA FORMATAÇÃO DO ACCORDION --- */
 
-/* --- INÍCIO FOOTER --- */
+/* Seção Rodapé Footer Geral*/
 .footer {
-    background-color: #0B1340;
-    color: white;
-    padding: 40px 60px;
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo-clara);
+    padding: 30px 50px;
 }
 
+/* ----- Container Principal ----- */
 .footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
+/* ----- Cada coluna do footer ----- */
 .footer-section {
     flex: 1;
     min-width: 200px;
     margin-bottom: 20px;
-    font-size: 16px; /* Ajuste na fonte base do rodapé */
+    font-size: 25px;
 }
 
-.footer-section .logo {
-    font-size: 28px;
-    margin-bottom: 15px;
+/* ----- Logo ----- */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    margin: 0;
 }
 
+.logo-img {
+    height: 40px;
+}
+
+/* ----- Títulos das seções ----- */
 .footer-title {
     margin: 15px 0 8px;
     font-weight: bold;
-    font-size: 18px;
 }
 
+/* ----- Redes Sociais ----- */
 .social-icons {
     display: flex;
-    gap: 15px;
-    font-size: 24px;
+    gap: 12px;
+    font-size: 40px;
 }
 
 .social-icons a {
     color: white;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
 .social-icons a:hover {
-    color: #7FE423;
+    color: var(--cor-destaque);
 }
 
+/* ----- Listas ----- */
 .footer-section ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .footer-section ul li {
-    margin: 8px 0;
+    margin: 6px 0;
 }
 
 .footer-section ul li a {
     color: white;
     text-decoration: none;
-    transition: color 0.3s;
+    transition: 0.3s;
 }
 
 .footer-section ul li a:hover {
-    color: #7FE423;
+    color: var(--cor-destaque);
 }
 
+/* ----- Parte de baixo ----- */
 .footer-bottom {
     margin-top: 30px;
-    font-size: 14px;
+    font-size: 20px;
     line-height: 1.6;
-    text-align: left;
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .footer-bottom a {
@@ -258,6 +298,5 @@ h1 {
 }
 
 .footer-bottom a:hover {
-    color: #7FE423;
+    color: var(--cor-destaque);
 }
-/* --- FIM FOOTER --- */

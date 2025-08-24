@@ -25,17 +25,10 @@ body {
 /* Inicio estilo header */
 #cabecalho{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
     width: 100%;
-    min-height: 120px;
-    padding: 15px 50px;
+    height: 120px;
     background-color: var(--cor-principal);
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
 }
 
 #verde{
@@ -43,15 +36,19 @@ body {
 }
 
 #logo{
+    margin-left: 50px;
     width: 85px;
-    height: auto;
 }
 
 #title_logo{
+    margin: 25px;
+
     font-size: 46px;
     color: whitesmoke;
+    width: 30px;
     font-family: "Poppins", sans-serif;
 }
+
 
 #nav1, #nav2 {
     display: flex;
@@ -59,38 +56,54 @@ body {
     justify-content: center;
     align-items: center;
     height: 100%;
+
+    & a:hover{
+        color: var(--cor-destaque);
+    }
 }
 
 #nav1 {
     position: relative;
-    margin-left: 50px;
-}
+    float: left;
+    margin-left: 10%;
+    margin-right: 20%;
 
-#nav1 a{
-    margin: 0 20px;
-    color:#FFFAFA;
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: 700;
+    & a{
+        margin-right:20px;
+        margin-left: 20px;
+        color:#FFFAFA;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 700;
+        transition: 0.3s;
+
+    }
 }
 
 #nav2{
     position: relative;
-    margin-left: 20px;
+    float: left;
+    
+    padding-left: 0px; /*empurra o login e cadastro para a direita*/
+
+    & a{
+        color: #FFFAFA;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 700;
+
+    }
 }
 
-#nav2 a{
-    color: #FFFAFA;
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: 700;
-}
-
+    
 #login a {
+    position: relative;
     margin-right: 20px;
     text-align: center;
-    display: inline-block;
+    display: inline;
     height: 40px;
+
+    /*formato botão*/
     border: 1px solid white;
     border-radius: 50px;
     padding: 7px 15px;
@@ -98,10 +111,19 @@ body {
     background: transparent;
 }
 
+.texto-reduzido {
+        display: none !important; /* Esconde "ENTRAR" por padrão */
+}
+
 #cadastro a{
+    position: relative;
+    margin-right: 20px;
     text-align: center;
-    display: inline-block;
+    display: inline;
     height: 40px;
+    transition: all 0.3s ease;
+    
+    /*formato botão*/
     border: 1px solid white;
     border-radius: 50px;
     padding: 7px 15px;
@@ -109,6 +131,11 @@ body {
     background: var(--cor-destaque);
 }
 
+#cadastro a:hover{
+    box-shadow: var(--cor-destaque);
+    color: var(--cor-principal);
+    transform: translateY(-2px);
+}
 /* Área de texto e imagem da página quem nós somos*/
 #bloco2 {
   display: flex;

@@ -5,18 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
     <link rel="stylesheet" href="styles/AprovaIaChat.css">
     <link rel="shortcut icon" href="image/logoaprovaia.svg" type="image/x-icon">
-    <title>Perguntar para Ia</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+    <title>ChatIA</title> 
 </head> 
 <body>
     <!-- Começo do menu superior da página -->
-    <header id="menu-sup">
-        <section class="logo-e-title">
-            <img id="logo" src="./image/logo.png" alt="Aprova Ai logo, com uma rosa colorida e o Aprova ai ao lado"><h1 id="title_logo">Aprova<span id="verde">IA</span></h1>
-        </section>
+        <header id="cabecalho"> 
+            <img id="logo" src="../Imagens/logoaprovaia.svg"><h1 id="title_logo">Aprova<span id="verde">IA</span></h1>
 
-        <section class="botoes-direita">
-            <button id="btn-login">Entrar</button><button id="btn-cadastro">Cadastre-se gratuitamente</button>
-        </section>
+       <!-- Navegação principal -->
+    <nav id="nav1">
+        <a href="../index.html">INÍCIO</a>
+        <a href="../HTML/sobre.html">SOBRE</a>
+        <a href="../HTML/patrocinadores.html">PARCEIROS</a>
+        <a href="AprovaIaCorrecao.html">REVISTA IA</a>
+        <a href="AprovaIaChat.html">TUTORIA</a>               
+    </nav>
+    
+    <!-- Navegação do botão de cadastro -->
+    <nav id="nav2">
+        <ul>
+            <li id="cadastro">
+                <a href="../Cadastro/HTML/cadastro.html">
+                    <span class="texto-completo">CADASTRO/LOGIN</span>
+                    <span class="texto-reduzido">ENTRAR</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+      
+
     </header>
             <!-- Fim do menu superior da página -->
 
@@ -80,6 +98,53 @@
     </main>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script src="scripts/Chat.js"></script>
+
+<!--Rodapé-->
+  <footer class="footer">
+  <div class="footer-container">
+    
+    <!-- Logo e redes sociais -->
+    <div class="footer-section">
+      <h2 class="logo">
+        <img src="../Imagens/logoaprovaia.svg" alt="Logo AprovaIA" class="logo-img"> 
+        Aprova<span class="destaque3">IA</span>
+      </h2>
+      <p class="footer-title">Redes Sociais</p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      </div>
+    </div>
+
+    <!-- Produtos -->
+    <div class="footer-section">
+      <p class="footer-title">Ferramentas</p>
+      <ul>
+        <li><a href="AprovaIaCorrecao.html">Correção de redações e textos</a></li>
+        <li><a href="AprovaIaChat.html">Chat IA</a></li>
+      </ul>
+    </div>
+
+    <!-- Sobre -->
+    <div class="footer-section">
+      <p class="footer-title">Sobre</p>
+      <ul>
+        <li><a href="../sobre.html">Sobre nós</a></li>
+        <li><a href="#">Dúvidas frequentes</a></li>
+        <li><a href="../Patrocinadores/patrocinadores.html">Parceiros</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Linha inferior -->
+  <div class="footer-bottom">
+    <p><a href="../HTML/Politicas.html">Política de Privacidade</a></p>
+    <p>AprovaIA - Todos os direitos reservados</p>
+    <p>Copyright (c) 2013 – 2024</p>
+    <p>CNPJ 39.783.146/0033-93</p>
+  </div>
+</footer>
 </body>
 </html>
 

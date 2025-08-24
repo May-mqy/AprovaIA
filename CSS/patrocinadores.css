@@ -18,7 +18,7 @@
 
 /* Inicio config fixa */
 body{
-    background-image: url("./imagens/background-patrocinio.png");
+    background-image: url("../Imagens/Patrocinadores/background-patrocinio.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,60 +27,217 @@ body{
 }
 /* Fim config fixa */
 
-/* Inicio estilo header */
+/* Inicio estilo Header/ Cabeçalho */
 #cabecalho{
     display: flex;
-    justify-content: space-between; /* Distribui espaço entre os elementos */
-    align-items: center; /* Centraliza verticalmente */
+    flex-direction: row;
     width: 100%;
     height: 120px;
     background-color: var(--cor-principal);
-
-}
-
-/* Container da logo e título */
-.logo-container {
-    display: flex;
-    align-items: center;
-    margin-left: 20px; /* Pequena margem à esquerda */
 }
 
 #verde{
-    color: var(--cor-destaque);
+    color: #8AF101;
 }
 
 #logo{
+    margin-left: 50px;
     width: 85px;
-    margin-right: 15px; /* Espaço entre logo e título */
 }
 
 #title_logo{
+    margin: 25px;
+
     font-size: 46px;
     color: whitesmoke;
+    width: 30px;
     font-family: "Poppins", sans-serif;
-    white-space: nowrap; /* Impede quebra de linha */
-    margin-right: 0px;
 }
 
 
+#nav1, #nav2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 
-/* Estilo do botão de cadastro */
-#cadastro a{
+    & a:hover{
+        color: var(--cor-destaque);
+    }
+}
+
+#nav1 {
+    position: relative;
+    float: left;
+    margin-left: 10%;
+    margin-right: 20%;
+
+    & a{
+        margin-right:20px;
+        margin-left: 20px;
+        color:#FFFAFA;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 700;
+        transition: 0.3s;
+
+    }
+}
+
+#nav2{
+    position: relative;
+    float: left;
+    
+    padding-left: 0px; /*empurra o login e cadastro para a direita*/
+
+    & a{
+        color: #FFFAFA;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 700;
+
+    }
+}
+
+    
+#login a {
+    position: relative;
+    margin-right: 20px;
+    text-align: center;
+    display: inline;
+    height: 40px;
+
+    /*formato botão*/
     border: 1px solid white;
     border-radius: 50px;
-    padding: 10px 20px;
+    padding: 7px 15px;
+    color: #FFFAFA;
+    background: transparent;
+}
+
+.texto-reduzido {
+        display: none !important; /* Esconde "ENTRAR" por padrão */
+}
+
+#cadastro a{
+    position: relative;
+    margin-right: 20px;
+    text-align: center;
+    display: inline;
+    height: 40px;
+    transition: all 0.3s ease;
+    
+    /*formato botão*/
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 7px 15px;
     color: var(--cor-principal);
     background: var(--cor-destaque);
-    transition: all 0.3s ease;
 }
 
 #cadastro a:hover{
-    background-color: rgba(138, 241, 1, 0.8);
-    box-shadow: 0 5px 15px rgba(138, 241, 1, 0.3);
+    box-shadow: var(--cor-destaque);
+    color: var(--cor-principal);
     transform: translateY(-2px);
 }
-
 /* Fim estilo header */
+
+/*Rodapé / Footer */
+
+/* Seção Rodapé Footer Geral*/
+.footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo-clara);
+    padding: 30px 50px;
+}
+
+/* ----- Container Principal ----- */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* ----- Cada coluna do footer ----- */
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+/* ----- Logo ----- */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    margin: 0;
+}
+
+.logo-img {
+    height: 40px;
+}
+
+/* ----- Títulos das seções ----- */
+.footer-title {
+    margin: 15px 0 8px;
+    font-weight: bold;
+}
+
+/* ----- Redes Sociais ----- */
+.social-icons {
+    display: flex;
+    gap: 12px;
+    font-size: 40px;
+}
+
+.social-icons a {
+    color: white;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--cor-destaque);
+}
+
+/* ----- Listas ----- */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 6px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--cor-destaque);
+}
+
+/* ----- Parte de baixo ----- */
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: var(--cor-destaque);
+}
+
 
 /* Media query para responsividade */
 @media (max-width: 1400px) {

@@ -4,30 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="CSS/politicas.css" type="text/css">
+    <link rel="stylesheet" href="../CSS/politicas.css" type="text/css">
     <link rel="shortcut icon" href="Imagens/logoaprovaia.svg" type="image/x-icon">
-    <title>Política de Privacidade - AprovaIA</title>
+    <title>AprovaIA - Política de Privacidade </title>
 </head>
 <body>
 
-    <header class="header">
-        <nav class="navbar">
-            <a href="#" class="logo">
-                <img src="Imagens/logoaprovaia.svg" alt="Logo AprovaIA" class="logo-img"> 
-                Aprova<span class="destaque-logo">IA</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="index.html">INÍCIO</a></li>
-                <li><a href="sobre.html">SOBRE</a></li>
-                <li><a href="#">PARCEIRO</a></li>
-                <li><a href="#">REVISA IA</a></li>
-                <li><a href="#">TUTOR IA</a></li>
-            </ul>
-            <div class="nav-buttons">
-                <button class="btn-login">LOGIN</button>
-                <button class="btn-cadastro">CADASTRO GRATUITO</button>
-            </div>
-        </nav>
+     <!--Cabeçalho-->
+        <header id="cabecalho"> 
+            <img id="logo" src="../Imagens/logoaprovaia.svg"><h1 id="title_logo">Aprova<span id="verde">IA</span></h1>
+ 
+       <!-- Navegação principal -->
+    <nav id="nav1">
+        <a href="../index.html">INÍCIO</a>
+        <a href="sobre.html">SOBRE</a>
+        <a href="patrocinadores.html">PARCEIROS</a>
+        <a href="../AprovIaCorrecao/AprovaIaCorrecao.html">REVISTA IA</a>
+        <a href="../AprovIaCorrecao/AprovaIaChat.html">TUTORIA</a>               
+    </nav>
+    
+    <!-- Navegação do botão de cadastro -->
+    <nav id="nav2">
+        <ul>
+            <li id="cadastro">
+                <a href="../Cadastro/HTML/cadastro.html">
+                    <span class="texto-completo">CADASTRO/LOGIN</span>
+                    <span class="texto-reduzido">ENTRAR</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+      
+
     </header>
 
     <div id="container">
@@ -71,7 +79,7 @@
         <div class="footer-container">
             <div class="footer-section">
                 <h2 class="logo">
-                    <img src="Imagens/logoaprovaia.svg" alt="Logo AprovaIA" class="logo-img"> 
+                    <img src="../Imagens/logoaprovaia.svg" alt="Logo AprovaIA" class="logo-img"> 
                     Aprova<span class="destaque-logo">IA</span>
                 </h2>
                 <p class="footer-title">Redes Sociais</p>
@@ -84,9 +92,8 @@
             <div class="footer-section">
                 <p class="footer-title">Produto</p>
                 <ul>
-                    <li><a href="#">Correção de redações e textos</a></li>
-                    <li><a href="#">Chat IA</a></li>
-                    <li><a href="#">Assistente de estudos</a></li>
+                    <li><a href="../AprovIaCorrecao/AprovaIaCorrecao.html">Correção de redações e textos</a></li>
+                    <li><a href="../AprovIaCorrecao/AprovaIaChat.html">Chat IA</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -94,7 +101,7 @@
                 <ul>
                     <li><a href="sobre.html">Sobre nós</a></li>
                     <li><a href="#">Dúvidas frequentes</a></li>
-                    <li><a href="Patrocinadores/patrocinadores.html">Parceiros</a></li>
+                    <li><a href="patrocinadores.html">Parceiros</a></li>
                 </ul>
             </div>
         </div>
@@ -106,7 +113,7 @@
         </div>
     </footer>
 
-    <script src="JS/politica.js"></script>
+    <script src="../JS/politica.js"></script>
 
 </body>
 </html>
