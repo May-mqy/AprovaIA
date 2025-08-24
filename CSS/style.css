@@ -60,7 +60,8 @@ body{
 #nav1 {
     position: relative;
     float: left;
-    margin-left: 180px;
+    margin-left: 10%;
+    margin-right: 20%;
 
     & a{
         margin-right:20px;
@@ -76,7 +77,7 @@ body{
 #nav2{
     position: relative;
     float: left;
-    margin-left: 10%;
+    
     padding-left: 0px; /*empurra o login e cadastro para a direita*/
 
     & a{
@@ -102,6 +103,10 @@ body{
     padding: 7px 15px;
     color: #FFFAFA;
     background: transparent;
+}
+
+.texto-reduzido {
+        display: none !important; /* Esconde "ENTRAR" por padrão */
 }
 
 #cadastro a{
@@ -227,7 +232,7 @@ button{
         width: 1000px;
         height: 1000px;
 
-        margin-top: 200px;
+        margin-top: 26px;
         background-color: var(--cor-principal);
         border-radius: 1038px;
     
@@ -255,64 +260,79 @@ button{
 
 /*Seção Vestibulares */
 
-
 #vestibular{
     position: relative;
     width: 100%;
-    height:250px;
+    min-height: 250px;
+    height: auto;
     margin-top: -230px;
     background-color: var(--cor-principal);
     text-align: center;
-    
+    padding: clamp(20px, 4vw, 40px) clamp(10px, 2vw, 20px);
+    padding-top: clamp(30px, 5vw, 40px);
 }
-
 
 #text_vest{
     color: #FFFAFA;
     font-family: Poppins;
-    font-size: 35px;
+    font-size: clamp(24px, 4vw, 35px);
     font-style: normal;
     font-weight: 700;
     text-align: center;
+    margin-bottom: clamp(20px, 3vw, 30px);
+    line-height: 1.2;
 }
 
 .alinha{
     position: relative;
-    width: 90%;
-    height:auto;
+    width: 100%;
+    height: auto;
     margin: auto;
-    margin-top: 20px;
+    margin-top: clamp(15px, 2vw, 20px);
 
     display: flex;
     text-align: center;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    gap: clamp(10px, 2vw, 20px);
+    flex-wrap: wrap;
+}
+
+.vestibular_quadrada, .vestibular_retangular, .vestibular_retangular2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: clamp(8px, 1vw, 12px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.vestibular_quadrada:hover, .vestibular_retangular:hover, .vestibular_retangular2:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .vestibular_quadrada img{
-    position: relative;
-    width: 100px;
-    height: 100px;
-    float: left;
+    width: clamp(60px, 8vw, 100px);
+    height: clamp(60px, 8vw, 100px);
+    object-fit: contain;
     z-index: 1;
 }
 
 .vestibular_retangular img{
-    position: relative;
-    width: 180px;
-    height: 60px;
-
-    float: left;
+    width: clamp(120px, 15vw, 180px);
+    height: clamp(40px, 5vw, 60px);
+    object-fit: contain;
     z-index: 1;
 }
 
 .vestibular_retangular2 img{
-    position: relative;
-    width: 200px;
-    height: 120px;
-
-    float: left;
+    width: clamp(140px, 17vw, 200px);
+    height: clamp(70px, 9vw, 120px);
+    object-fit: contain;
     z-index: 1;
 }
 
@@ -335,6 +355,7 @@ button{
             margin-top: 80px;
             padding: 50px;
             background-color: var(--cor-fundo-clara);
+            width: 100%;
 
            & #titulo_ferramentas{
                 width: 100%;
@@ -497,6 +518,7 @@ button{
     font-size: 40px;
     font-weight: bold;
     color: #0d0d2d;
+    margin-left: 17%;
 }
 
 .destaque3{
@@ -556,6 +578,7 @@ button{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-left: 23%;
         
     }
 }
@@ -708,4 +731,597 @@ button{
 
 .footer-bottom a:hover {
     color: #70E000;
+}
+
+
+
+
+
+
+/* Media Queries para Responsividade - Telas 1000px+ */
+
+/* Ajustes gerais para responsividade */
+#cabecalho {
+    flex-wrap: wrap;
+    padding: 0 clamp(20px, 3vw, 50px);
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Controle do texto do botão cadastro/login - PADRÃO */
+.texto-completo {
+    display: inline;
+}
+
+.texto-reduzido {
+    display: none;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+#logo {
+    width: clamp(60px, 8vw, 85px);
+}
+
+#title_logo {
+    margin-left: clamp(10px, 2vw, 25px);
+    font-size: clamp(32px, 4vw, 46px);
+    white-space: nowrap;
+}
+
+#nav1 {
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0 clamp(10px, 2vw, 20px);
+    gap: clamp(15px, 2vw, 30px);
+    flex-wrap: wrap;
+}
+
+#nav1 a {
+    font-size: clamp(18px, 2.2vw, 25px);
+    white-space: nowrap;
+}
+
+#nav2 {
+    gap: clamp(10px, 1.5vw, 20px);
+    flex-shrink: 0;
+}
+
+#nav2 ul {
+    display: flex;
+    gap: clamp(10px, 1.5vw, 20px);
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#cadastro a {
+    font-size: clamp(16px, 2vw, 25px);
+    padding: clamp(5px, 1vw, 7px) clamp(10px, 1.5vw, 15px);
+    white-space: nowrap;
+    border: 1px solid white;
+    border-radius: 50px;
+    color: var(--cor-principal);
+    background: var(--cor-destaque);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    min-height: 40px;
+    transition: all 0.3s ease;
+}
+
+/* Texto inicial responsivo */
+#texto_inicial {
+    padding: clamp(30px, 5vw, 50px) clamp(20px, 3vw, 75px);
+    gap: clamp(20px, 5vw, 80px);
+    flex-wrap: wrap;
+}
+
+.divisao1 {
+    margin-top: clamp(50px, 10vw, 150px);
+    flex: 1;
+    min-width: 500px;
+}
+
+.divisao1 p {
+    width: 100%;
+    max-width: 590px;
+    font-size: clamp(20px, 2.5vw, 25px);
+}
+
+.divisao1 .texto1 {
+    width: 100%;
+    max-width: 600px;
+    font-size: clamp(20px, 2.5vw, 25px);
+    line-height: 1.4;
+}
+
+h2 {
+    font-size: clamp(35px, 5vw, 50px);
+    line-height: 1.1;
+    width: 100%;
+    max-width: 900px;
+}
+
+#botao_inicio a {
+    font-size: clamp(24px, 3vw, 35px);
+    padding: clamp(10px, 1.5vw, 15px) clamp(15px, 2vw, 20px);
+    width: 100%;
+    max-width: 550px;
+}
+
+.botao_icon {
+    width: clamp(50px, 6vw, 120px);
+    height: clamp(40px, 5vw, 72px);
+    margin-right: clamp(10px, 1.5vw, 15px);
+}
+
+#divisao2 {
+    flex: 1;
+    min-width: 400px;
+    margin-left: clamp(20px, 3vw, 50px);
+}
+
+.bolona {
+    width: clamp(400px, 50vw, 1000px);
+    height: clamp(400px, 50vw, 1000px);
+    margin-top: clamp(100px, 15vw, 200px);
+}
+
+/* Vestibulares responsivo */
+#vestibular {
+    padding: clamp(30px, 4vw, 40px) clamp(20px, 3vw, 40px);
+}
+
+#text_vest {
+    font-size: clamp(24px, 3.5vw, 35px);
+    margin-bottom: clamp(20px, 3vw, 30px);
+}
+
+.alinha {
+    gap: clamp(15px, 2vw, 20px);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.vestibular_quadrada img {
+    width: clamp(70px, 8vw, 100px);
+    height: clamp(70px, 8vw, 100px);
+}
+
+.vestibular_retangular img {
+    width: clamp(120px, 15vw, 180px);
+    height: clamp(40px, 5vw, 60px);
+}
+
+.vestibular_retangular2 img {
+    width: clamp(140px, 17vw, 200px);
+    height: clamp(80px, 10vw, 120px);
+}
+
+/* Ferramentas responsivo */
+.ferramentas-container {
+    padding: clamp(30px, 5vw, 50px) clamp(20px, 3vw, 40px);
+}
+
+#titulo_ferramentas {
+    font-size: clamp(35px, 5vw, 50px);
+    margin-bottom: clamp(40px, 6vw, 60px);
+    text-align: center;
+}
+
+.containers {
+    gap: clamp(20px, 3vw, 40px);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 100%;
+    max-width: clamp(350px, 45vw, 500px);
+    min-width: 320px;
+    padding: clamp(15px, 2vw, 20px);
+}
+
+.card-tab {
+    font-size: clamp(20px, 2.5vw, 30px);
+    padding: clamp(6px, 1vw, 8px) clamp(8px, 1.2vw, 10px);
+}
+
+.card-content {
+    padding: clamp(15px, 2vw, 20px);
+}
+
+.card-content h3 {
+    font-size: clamp(28px, 3.5vw, 35px);
+    margin-bottom: clamp(30px, 4vw, 40px);
+}
+
+.card-content p {
+    font-size: clamp(20px, 2.2vw, 25px);
+    line-height: 1.4;
+}
+
+.Recursos {
+    margin-top: clamp(40px, 6vw, 100px);
+}
+
+.recurso {
+    font-size: clamp(24px, 2.8vw, 30px);
+    margin-bottom: clamp(15px, 2vw, 20px);
+}
+
+.recurso-texto {
+    font-size: clamp(18px, 2vw, 24px);
+}
+
+.recurso-check img {
+    width: clamp(25px, 3vw, 35px);
+    height: clamp(28px, 3.5vw, 40px);
+}
+
+/* FAQ responsivo */
+.faq {
+    padding: 0 clamp(20px, 3vw, 40px);
+    margin-bottom: clamp(80px, 10vw, 120px);
+}
+
+.faq h2 {
+    width: 100%;
+    font-size: clamp(30px, 4vw, 40px);
+    line-height: 1.2;
+    margin-bottom: clamp(20px, 3vw, 30px);
+    text-align: center;
+    
+}
+
+.faq-question {
+    font-size: clamp(22px, 2.8vw, 30px);
+    padding: clamp(10px, 1.5vw, 12px) 0;
+}
+
+.faq-answer p {
+    font-size: clamp(18px, 2.2vw, 25px);
+    padding: clamp(8px, 1.2vw, 10px) 0;
+}
+
+/* Patrocinadores responsivo */
+.secao_patrocinadores {
+    padding: clamp(0px, 4vw, 0px) clamp(0px, 3vw, 0px);
+}
+
+.secao_patrocinadores h2 {
+    font-size: clamp(35px, 4.5vw, 50px);
+    margin-bottom: clamp(20px, 3vw, 30px);
+}
+
+.carrossel-container {
+    height: clamp(150px, 20vw, 200px);
+}
+
+.carrossel-item {
+    width: clamp(120px, 15vw, 180px);
+    height: clamp(120px, 15vw, 180px);
+    margin: 0 clamp(10px, 1.5vw, 20px);
+}
+
+/* Footer responsivo */
+.footer {
+    padding: clamp(20px, 3vw, 30px) clamp(20px, 3vw, 50px);
+}
+
+.footer-container {
+    gap: clamp(20px, 3vw, 30px);
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    min-width: clamp(200px, 25vw, 300px);
+    font-size: clamp(20px, 2.2vw, 25px);
+}
+
+.logo {
+    font-size: clamp(28px, 3.5vw, 35px);
+}
+
+.footer-title {
+    font-size: clamp(22px, 2.5vw, 25px);
+}
+
+.social-icons {
+    font-size: clamp(30px, 3.5vw, 40px);
+    gap: clamp(8px, 1.2vw, 12px);
+}
+
+.footer-section ul li a {
+    font-size: clamp(18px, 2vw, 25px);
+}
+
+.footer-bottom {
+    font-size: clamp(16px, 1.8vw, 20px);
+    text-align: center;
+}
+
+/* NOVA RESPONSIVIDADE - Nome AprovaIA some em 1800px ou menos */
+@media (max-width: 1800px) {
+    #title_logo {
+        display: none;
+    }
+    
+    #logo {
+        margin-left: clamp(20px, 3vw, 50px);
+    }
+}
+
+/* NOVA RESPONSIVIDADE - Botão muda para ENTRAR em 1550px ou menos */
+@media (max-width: 1550px) {
+    .texto-completo {
+        display: none !important;
+    }
+
+    .texto-reduzido {
+        display: inline !important;
+    }
+}
+
+/* Responsividade específica da seção vestibulares */
+@media (max-width: 1400px) {
+    .alinha {
+        gap: clamp(8px, 1.5vw, 15px);
+    }
+    
+    .vestibular_quadrada img {
+        width: clamp(55px, 7vw, 85px);
+        height: clamp(55px, 7vw, 85px);
+    }
+
+    .vestibular_retangular img {
+        width: clamp(110px, 13vw, 160px);
+        height: clamp(35px, 4vw, 55px);
+    }
+
+    .vestibular_retangular2 img {
+        width: clamp(125px, 15vw, 180px);
+        height: clamp(65px, 8vw, 100px);
+    }
+}
+
+@media (max-width: 1200px) {
+    #vestibular {
+        margin-top: -150px;
+        padding: clamp(25px, 4vw, 35px) clamp(15px, 2vw, 25px);
+    }
+    
+    #text_vest {
+        font-size: clamp(20px, 3.5vw, 28px);
+        margin-bottom: clamp(15px, 2.5vw, 25px);
+    }
+    
+    .alinha {
+        gap: clamp(6px, 1.2vw, 12px);
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .alinha {
+        justify-content: space-around;
+        gap: clamp(5px, 1vw, 10px);
+    }
+    
+    .vestibular_quadrada, .vestibular_retangular, .vestibular_retangular2 {
+        padding: clamp(4px, 0.8vw, 8px);
+        border-radius: 8px;
+    }
+    
+    .vestibular_quadrada img {
+        width: clamp(45px, 6vw, 70px);
+        height: clamp(45px, 6vw, 70px);
+    }
+
+    .vestibular_retangular img {
+        width: clamp(90px, 12vw, 140px);
+        height: clamp(30px, 4vw, 45px);
+    }
+
+    .vestibular_retangular2 img {
+        width: clamp(105px, 13vw, 160px);
+        height: clamp(55px, 7vw, 85px);
+    }
+}
+
+@media (max-width: 768px) {
+    #vestibular {
+        margin-top: -100px;
+        padding: clamp(20px, 3vw, 30px) clamp(10px, 1.5vw, 20px);
+    }
+    
+    #text_vest {
+        font-size: clamp(18px, 3vw, 24px);
+        margin-bottom: clamp(12px, 2vw, 20px);
+        padding: 0 10px;
+    }
+    
+    .alinha {
+        gap: clamp(4px, 0.8vw, 8px);
+        justify-content: center;
+    }
+    
+    .vestibular_quadrada img {
+        width: clamp(35px, 5vw, 55px);
+        height: clamp(35px, 5vw, 55px);
+    }
+
+    .vestibular_retangular img {
+        width: clamp(75px, 10vw, 120px);
+        height: clamp(25px, 3.5vw, 40px);
+    }
+
+    .vestibular_retangular2 img {
+        width: clamp(85px, 11vw, 140px);
+        height: clamp(45px, 6vw, 75px);
+    }
+}
+
+@media (max-width: 480px) {
+    #vestibular {
+        margin-top: -80px;
+        padding: 15px 10px;
+    }
+    
+    #text_vest {
+        font-size: 16px;
+        margin-bottom: 15px;
+        line-height: 1.3;
+    }
+    
+    .alinha {
+        gap: 5px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .vestibular_quadrada, .vestibular_retangular, .vestibular_retangular2 {
+        padding: 6px;
+        margin: 2px;
+        border-radius: 6px;
+    }
+    
+    .vestibular_quadrada img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .vestibular_retangular img {
+        width: 60px;
+        height: 20px;
+    }
+
+    .vestibular_retangular2 img {
+        width: 70px;
+        height: 35px;
+    }
+}
+
+/* Media Queries específicas antigas - mantidas para compatibilidade */
+@media (max-width: 1400px) {
+    #texto_inicial {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .divisao1 {
+        margin-top: 50px;
+        text-align: center;
+    }
+
+    #divisao2 {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .containers {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #cabecalho {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        text-align: center;
+    }
+
+    #nav1 {
+        margin: 0;
+        justify-content: center;
+        order: 2;
+    }
+
+    #nav2 {
+        order: 3;
+        justify-content: center;
+    }
+
+    .logo-section {
+        order: 1;
+    }
+
+    .alinha {
+        gap: 15px;
+        justify-content: center;
+    }
+
+    .vestibular_quadrada,
+    .vestibular_retangular,
+    .vestibular_retangular2 {
+        flex: 0 0 auto;
+    }
+    
+    /* Ajustes adicionais para o botão em telas muito pequenas */
+    #cadastro a {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .containers {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .card {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    #nav1 {
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
+    }
+
+    #nav1 a,
+    #login a,
+    #cadastro a {
+        font-size: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .alinha {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .bolona {
+        margin-top: 50px;
+    }
+
+    #texto_inicial {
+        min-height: auto;
+        padding: 30px 20px;
+    }
 }

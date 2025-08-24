@@ -62,42 +62,7 @@ body{
     margin-right: 0px;
 }
 
-/* Navegação central */
-#nav1 {
-    display: flex;
 
-    & a{
-        margin: 0 15px; /* Margem entre os links */
-        color: #FFFAFA;
-        text-decoration: none;
-        font-size: 25px;
-        font-weight: 700;
-        white-space: nowrap; /* Impede quebra de linha */
-    }
-
-    & a:hover{
-        color: var(--cor-destaque);
-        transition: color 0.3s ease;
-    }
-}
-
-/* Navegação do botão de cadastro */
-#nav2{
-    margin-right: 20px; /* Pequena margem à direita */
-
-    & ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    & a{
-        color: #FFFAFA;
-        text-decoration: none;
-        font-size: 25px;
-        font-weight: 700;
-    }
-}
 
 /* Estilo do botão de cadastro */
 #cadastro a{
