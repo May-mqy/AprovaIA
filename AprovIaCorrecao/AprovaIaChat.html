@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="styles/AprovaIaChat.css">
+    <link rel="shortcut icon" href="image/logoaprovaia.svg" type="image/x-icon">
+    <title>Perguntar para Ia</title> 
+</head> 
+<body>
+    <!-- Começo do menu superior da página -->
+    <header id="menu-sup">
+        <section class="logo-e-title">
+            <img id="logo" src="./image/logo.png" alt="Aprova Ai logo, com uma rosa colorida e o Aprova ai ao lado"><h1 id="title_logo">Aprova<span id="verde">IA</span></h1>
+        </section>
+
+        <section class="botoes-direita">
+            <button id="btn-login">Entrar</button><button id="btn-cadastro">Cadastre-se gratuitamente</button>
+        </section>
+    </header>
+            <!-- Fim do menu superior da página -->
+
+    <p id="info-da-section">FAÇA SUA PERGUNTA PARA IA</p>
+    
+    <main>
+        <section id="section-principal">
+            <section id="lado-esquerdo">
+                <select class="form-select" aria-label="Default select example" id="select">
+                    <option selected>Assuntos Gerais</option>
+                    <option value="1">Artes</option>
+                    <option value="2">Biologia</option>
+                    <option value="3">Educação Física</option>
+                    <option value="4">Filosofia</option>
+                    <option value="5">Física</option>
+                    <option value="6">Geografia</option>
+                    <option value="7">História</option>
+                    <option value="8">Inglês</option>
+                    <option value="9">Matemática</option>
+                    <option value="10">Português</option>
+                    <option value="11">Química</option>
+                    <option value="12">Sociologia</option>
+                </select>
+                <form>
+                    <textarea name="campo-redação" id="text-perguntas" placeholder="Faça sua pergunta aqui"></textarea>
+                    <button type="reset" id="deleteButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 26 27" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M25.9986 5.33301H0V9.66614C0.766138 9.66614 1.5009 9.97049 2.04264 10.5122C2.58438 11.054 2.88873 11.7887 2.88873 12.5549V18.3324C2.88873 22.4171 2.88873 24.4609 4.15832 25.7291C5.42648 26.9987 7.47025 26.9987 11.5549 26.9987H14.4436C18.5297 26.9987 20.5721 26.9987 21.8402 25.7291C23.1113 24.4609 23.1113 22.4171 23.1113 18.3324V12.5549C23.1113 11.7887 23.4156 11.054 23.9574 10.5122C24.4991 9.97049 25.2339 9.66614 26 9.66614L25.9986 5.33301ZM10.8327 12.5549C10.8327 12.1718 10.6806 11.8044 10.4097 11.5336C10.1388 11.2627 9.77144 11.1105 9.38837 11.1105C9.0053 11.1105 8.63792 11.2627 8.36705 11.5336C8.09618 11.8044 7.944 12.1718 7.944 12.5549V19.7768C7.944 20.1598 8.09618 20.5272 8.36705 20.7981C8.63792 21.069 9.0053 21.2212 9.38837 21.2212C9.77144 21.2212 10.1388 21.069 10.4097 20.7981C10.6806 20.5272 10.8327 20.1598 10.8327 19.7768V12.5549ZM18.0546 12.5549C18.0546 12.1718 17.9024 11.8044 17.6315 11.5336C17.3606 11.2627 16.9933 11.1105 16.6102 11.1105C16.2271 11.1105 15.8597 11.2627 15.5889 11.5336C15.318 11.8044 15.1658 12.1718 15.1658 12.5549V19.7768C15.1658 20.1598 15.318 20.5272 15.5889 20.7981C15.8597 21.069 16.2271 21.2212 16.6102 21.2212C16.9933 21.2212 17.3606 21.069 17.6315 20.7981C17.9024 20.5272 18.0546 20.1598 18.0546 19.7768V12.5549Z" fill="#0A113F"/>
+                            <path d="M10.209 1.53465C10.3736 1.38154 10.7362 1.24577 11.2417 1.149C11.8219 1.04599 12.4103 0.996196 12.9995 1.00023C13.635 1.00023 14.2532 1.05222 14.7573 1.149C15.2614 1.24577 15.6239 1.38154 15.79 1.53609" stroke="#0A113F" stroke-width="2" stroke-linecap="round"/>
+                        </svg>Apagar
+                    </button>
+                </form>
+                <button id="sendButton">Perguntar</button>
+            </section>
+            <section id="area-resposta">
+                <header id="superior-quadro">
+                    <h3>Tire suas dúvidas</h3>
+
+                    <div id="botao-container">
+                        <button class="button-background" id="botao-copiar" onclick="copiarTexto()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 37 37" fill="none">
+                                <g clip-path="url(#clip0_680_252)">
+                                    <path d="M18.7916 3.25391H12.9506C10.3046 3.25391 8.20764 3.25391 6.56814 3.47591C4.87914 3.70391 3.51264 4.18391 2.43564 5.26541C1.35714 6.34691 0.878641 7.71941 0.652141 9.41441C0.431641 11.0614 0.431641 13.1659 0.431641 15.8224V24.5794C0.431641 26.8414 1.81164 28.7794 3.77214 29.5924C3.67164 28.2274 3.67164 26.3149 3.67164 24.7219V17.2069C3.67164 15.2854 3.67164 13.6279 3.84864 12.3019C4.03914 10.8799 4.46814 9.51791 5.56914 8.41241C6.67014 7.30691 8.02764 6.87641 9.44364 6.68441C10.7636 6.50741 12.4136 6.50741 14.3291 6.50741H18.9341C20.8481 6.50741 22.4951 6.50741 23.8166 6.68441C23.4208 5.67385 22.7296 4.80601 21.8333 4.19408C20.9369 3.58215 19.877 3.25451 18.7916 3.25391Z" fill="#0A113F"/>
+                                    <path d="M5.83203 17.3493C5.83203 13.2603 5.83203 11.2158 7.09803 9.9453C8.36253 8.6748 10.398 8.6748 14.472 8.6748H18.792C22.8645 8.6748 24.9015 8.6748 26.1675 9.9453C27.4335 11.2158 27.432 13.2603 27.432 17.3493V24.5793C27.432 28.6683 27.432 30.7128 26.1675 31.9833C24.9015 33.2538 22.8645 33.2538 18.792 33.2538H14.472C10.3995 33.2538 8.36253 33.2538 7.09803 31.9833C5.83203 30.7128 5.83203 28.6683 5.83203 24.5793V17.3493Z" fill="#0A113F"/>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_680_252">
+                                        <rect width="36" height="36" fill="white" transform="translate(0.431641 0.253906)"/>
+                                    </clipPath>
+                                </defs>
+                            </svg>Copiar
+                        </button>
+                    </div>
+                </header>
+                <div id="linha"></div> <!--Uma linha que faz a divsória do header e do-->
+                <div id="responseArea" class="response-box">
+                    A resposta do Gemini aparecerá aqui.
+                </div> 
+            </section>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="scripts/Chat.js"></script>
+</body>
+</html>
+
+
+
+
+<!-- 
+<div class="mb-3"> 
+                <label for="exampleFormControlInput1" class="form-label">Faça sua pergunta</label> 
+                <input type="text" class="form-control" id="input" placeholder="Faça sua pergunta aqui"> 
+            </div>
+
+            <select class="form-select" aria-label="Default select example" id="select">
+                <option selected>Assuntos Gerais</option>
+                <option value="1">Matemática</option>
+                <option value="2">Portguês</option>
+                <option value="3">Ciências da natureza</option>
+                <option value="4">Redação</option>
+            </select> 
+
+            <div class="mb-3"> 
+                <label  class="form-label">Example textarea</label> 
+                <div id="responseArea" class="response-box">
+                    A resposta do Gemini aparecerá aqui.
+                </div> 
+            </div> 
+
+            <div class="col-12"> 
+                <button class="btn btn-primary" type="submit" id="sendButton">Submit form</button> 
+            </div>  -->
