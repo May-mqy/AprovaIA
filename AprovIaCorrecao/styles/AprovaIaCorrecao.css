@@ -158,7 +158,7 @@ main {
     position: relative;
     border-radius: 40px;
     width: 96%;
-    height: 900px;
+    height: 800px;
     background-color: #EDEDED;
     border: solid 1px #878787;
     margin: auto;
@@ -173,7 +173,7 @@ main {
     position: relative;
     background-color: #fff;
     width: 30%;
-    height: 800px;
+    height: 650px;
     border-radius: 30px;
     border: solid 1px #ccc;
     margin-top: 50px;
@@ -184,11 +184,16 @@ main {
 
 #nav-composition {
     position: relative;
+    font-size: 21px;
     display: flex;
     align-items: center;
     gap: 12px;
     width: 100%;
     height: 60px;
+}
+
+#nav-composition h3 {
+    margin-left: 20px;
 }
 
 #nav-composition select,
@@ -254,14 +259,13 @@ nav h3 {
     margin-right: 20px;
 }
 
-
 #text-composition {
     position: relative;
     resize: none;
     font-size: large;
     font-family: "Poppins", sans-serif;
     width: 100%;
-    height: 736px;
+    height: 586px;
     align-items: baseline;
     border: none;
     padding-top: 15px;
@@ -290,7 +294,7 @@ nav h3 {
     font-family: "Poppins", sans-serif;
     font-size: large;
     width: 60%;
-    height: 800px;
+    height: 650px;
     border-radius: 30px;
     border: solid 1px #ccc;
     margin-top: 50px;
@@ -324,17 +328,23 @@ nav h3 {
     width: 100%;
 }
 
+#container-botoes {
+    width: 100%;
+    margin-top: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+
 #deleteButton {
     position: relative;
-    width: 18%;
-    height: 35px;
-    margin-top: 5px;
+    width: 30%;
+    height: 45px;
     background-color: #C5D7FF;
     border-radius: 30px;
     display: inline-flex;  
     align-items: center;
-    gap: 8px;
-    padding: 0 12px;
+    gap: 0px;
+    padding: 0 30px;
     border: none;
     float: left;
 }
@@ -344,16 +354,18 @@ nav h3 {
     color: #0A113F;
 }
 
+#deleteButton svg {
+    margin-right: 5px;
+}
+
 #sendButton {
     position: relative;
-    width: 20%;
-    height: 35px;
-    margin-top: 5px;
-    margin-left: 326px;
+    width: 30%;
+    height: 45px;
     border-radius: 30px;
     background-color: #dfdfdf;
-    border: 1px solid #D3D3D3 ;
-    clear: left;
+    border: none ;
+    float: left;
 }
 
 #sendButton:hover {

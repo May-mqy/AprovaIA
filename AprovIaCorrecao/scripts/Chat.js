@@ -8,8 +8,7 @@ const select = document.getElementById('select');
 const copiarTexto = () => {navigator.clipboard.writeText(responseArea.innerText), alert('Copiado para a área de tranferência')}
 
 sendButton.addEventListener('click', async () => {   
-    //const prompt = `Tenho uma dúvida: ${promptInput.value.trim()} referente a matéria de ${select.value}`
-    
+       
     const prompt = `Você agora é um ciêntista na matéria de ${select.value}, com mais de 30 anos de pesquisa e ensino acadêmico (Não precisa mencionar isso). Seu papel é oferecer explicações profundas e fundamentadas de uma maneira que um aluno de ensino médio entenda. Minha pergunta é ${promptInput.value.trim()} e se essa minha pergunta não estiver relacionada com a matéria escolhida e encerre a tarefa. E se essa pergunta não for relacionada à assuntos didáticos explique que você é uma ia de estudos (Crianças vão utilizar o site evite temas sexuais e/ou muito violentos)`
 
     //Verificação se o campo de perguntas está preenchido
