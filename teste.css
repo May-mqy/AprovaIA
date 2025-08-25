@@ -1,44 +1,54 @@
 .carousel-container {
-  position: relative;
-  width: 90vw;     /* tamanho visível */
-  overflow: hidden; /* esconde o que passar */
-  margin: auto;
+    /* Define o contêiner como um ponto de referência para os botões */
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden; /* Esconde os itens que estão fora da visualização */
 }
 
 .carousel-patrocinadores {
-  display: flex;
-  gap: 20px;
-  transition: transform 0.3s ease-in-out;
+    display: flex; /* Alinha os itens lado a lado */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+    gap: 20px; /* Espaço entre os itens */
 }
 
 .item {
-  min-width: 180px;  /* largura de cada card */
-  margin: 5px;
-  text-align: center;
-  padding: 20px;
-  border-radius: 20px;
+    width: 180px;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 50px 0px 60px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    flex-shrink: 0; /* Impede que os itens encolham */
 
-    & img{
-      max-width: 100%;
-      height: auto;
+    & img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
-button {
-  position: absolute;
-  top: 40%;
-  background: #007bff;
-  color: white;
-  border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 30%;
+/* Estilo para as setas de navegação */
+.prev, .next {
+    position: absolute;
+    width: 45px;
+    top: 55%;
+    transform: translateY(-150%);
+    background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 10; /* Garante que os botões fiquem sobre os itens */
+    padding: 10px;
+    border-radius: 50%;
 }
 
 .prev {
-  left: 0;
+    left: 20px; /* Posição à esquerda do contêiner */
 }
 
 .next {
-  right: 0;
+    right: 20px; /* Posição à direita do contêiner */
 }

@@ -222,7 +222,7 @@
   <h2>FICOU NA DÚVIDA? CONHEÇA 3 MOTIVOS PARA ESTUDAR COM O <span class="destaque1">APROVA<span class="destaque2">IA</span></span></h2>
 
   <div class="faq-item">
-    <button class="faq-question">O que é o APROVA<span class="destaque3">IA?</span></button>
+    <button class="faq-question" aria-expanded="false">O que é o APROVA<span class="destaque3">IA?</span></button>
     <div class="faq-answer">
       <p>O AprovaIA é uma plataforma de estudos gratuita que usa inteligência artificial para otimizar sua preparação para o vestibular. 
       Com o poder da IA, você terá ferramentas essenciais: um corretor de redação que dá feedback instantâneo para melhorar sua escrita, corrigir dúvidas e em breve uma trilha de estudos personalizada e um cronograma adaptado ao seu ritmo.</p>
@@ -230,7 +230,7 @@
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">Ferramentas são gratuitas?</button>
+    <button class="faq-question" aria-expanded="false">Ferramentas são gratuitas?</button>
     <div class="faq-answer">
       <p>Sim, as ferramentas do AprovaIA são totalmente gratuitas. A plataforma foi pensada para ser acessível e permitir que todos tenham 
       acesso a recursos de qualidade sem custo algum.</p>
@@ -238,7 +238,7 @@
   </div>
 
   <div class="faq-item">
-    <button class="faq-question">Consigo fazer tudo pela plataforma?</button>
+    <button class="faq-question" aria-expanded="false">Consigo fazer tudo pela plataforma?</button>
     <div class="faq-answer">
       <p>Em breve, além da IA totalmente gratuita, você terá acesso a Materiais, exercícios, trilhas de estudos e um cronograma personalizado! Nosso objetivo é facilitar sua jornada de estudos e deixar você focado no que realmente importa: a aprovação.</p>
     </div>
@@ -262,34 +262,28 @@ questions.forEach(q => {
 
 </section>
 
-<!--Seção Patrocinadores Gustavo -->
+<!--Seção Patrocinadores -->
 <section class="secao_patrocinadores">
-    <!-- Inicio slider financiadores mestres -->
-         <section class="patrocinadores">
-        <h2>Financiadores mestres</h2>
-        <div class="carrossel-container">
-            <div class="carrossel-track" id="carrosselTrack1">
-                <div class="carrossel-item"><img src="./Imagens/Patrocinadores/Lemann.png" alt="Patrocinador 1"></div>
-                <div class="carrossel-item"><img src="./Imagens/Patrocinadores/Sennac.png" alt="Patrocinador 2"></div>
-                <div class="carrossel-item"><img src="./Imagens/Patrocinadores/Oracle.png" alt="Patrocinador 3"></div>
-                <div class="carrossel-item"><img src="./Imagens/Patrocinadores/Casasbahia.png" alt="Patrocinador 4"></div>
-                <div class="carrossel-item"><img src="./Imagens/Patrocinadores/gov.png" alt="Patrocinador 5"></div>
-                <div class="carrossel-item"><img src="./Imagens/Patrocinadores/jpmorgan.png" alt="Patrocinador 6"></div>
-                <div class="carrossel-item"><img src="./Imagens/Patrocinadores/cyrela.png" alt="Patrocinador 7"></div>
-                <div class="carrossel-item"><img src="./Imagens/Patrocinadores/arymax.png" alt="Patrocinador 8"></div>
-                <!-- DUPLICAÇÃO PARA EFEITO CONTÍNUO -->
-                <div class="carrossel-item"><img src="./Imagens/Patrocinadores/Lemann.png" alt="Patrocinador 1"></div>
-                <div class="carrossel-item"><img src="./Imagens/Patrocinadores/Sennac.png" alt="Patrocinador 2"></div>
-                <div class="carrossel-item"><img src="./Imagens/Patrocinadores/Oracle.png" alt="Patrocinador 3"></div>
-                <div class="carrossel-item"><img src="./Imagens/Patrocinadores/Casasbahia.png" alt="Patrocinador 4"></div>
-                <div class="carrossel-item"><img src="./Imagens/Patrocinadores/gov.png" alt="Patrocinador 5"></div>
-                <div class="carrossel-item"><img src="./Imagens/Patrocinadores/jpmorgan.png" alt="Patrocinador 6"></div>
-                <div class="carrossel-item"><img src="./Imagens/Patrocinadores/cyrela.png" alt="Patrocinador 7"></div>
-                <div class="carrossel-item"><img src="./Imagens/Patrocinadores/arymax.png" alt="Patrocinador 8"></div>
-            </div>
-        </div>
-    </section>
-    <!-- Fim slider financiadores mestres -->
+   <h2 id="titulo-patrocinadores">PRINCIPAIS FINANCIADORES</h2>
+  <div class="carousel-container">
+  <button class="prev">&#10094;</button> <!-- seta esquerda -->
+
+  <div class="carousel-patrocinadores">
+    <div class="item"><img src="Imagens/Patrocinadores/Lemann.png" alt="Patrocinador Fundação Lemann"></div>
+    <div class="item"><img src="Imagens/Patrocinadores/Sennac.png" alt="Patrocinador Senac"></div>
+    <div class="item"><img src="Imagens/Patrocinadores/Oracle.png" alt="Patrocinador Oracle"></div>
+    <div class="item"><img src="Imagens/Patrocinadores/Casasbahia.png" alt="Patrocinador Casas Bahia"></div>
+    <div class="item"><img src="Imagens/Patrocinadores/gov.png" alt="Patrocinador Governo"></div>
+    <div class="item"><img src="Imagens/Patrocinadores/jpmorgan.png" alt="Patrocinador JP Morgan"></div>
+    <div class="item"><img src="Imagens/Patrocinadores/cyrela.png" alt="Patrocinador Cyrela"></div>
+    <div class="item"><img src="Imagens/Patrocinadores/arymax.png" alt="Patrocinador Arymax"></div>
+  </div>
+  
+  <button class="next">&#10095;</button> <!-- seta direita -->
+</div>
+
+<a href="HTML/patrocinadores.html" id="botao-patrocinadores">SAIBA MAIS</a>
+
 </section>
 
 
@@ -340,6 +334,8 @@ questions.forEach(q => {
   </div>
 </footer>
 
+<!-- Importa o JS -->
+  <script src="JS/index.js" defer></script>
 
 </body>
 </html>

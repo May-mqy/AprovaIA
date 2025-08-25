@@ -1,72 +1,53 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Aplica a classe padrão (cadastro-js) ao carregar a página
-    document.body.className = "cadastro-js";
-    
-    var btnlogin = document.querySelector("#login");
-    var btncadastro = document.querySelector("#cadastro");
+//faq question / area de dúvidas 
 
-    btnlogin.addEventListener("click", function() {
-        document.body.className = "fazer-login-js";
-    });
+// Seleciona todos os itens da FAQ
+const items = document.querySelectorAll('.faq-item');
 
-    btncadastro.addEventListener("click", function() {
-        document.body.className = "cadastro-js";
-    });
-});
+items.forEach(item => {
+    const btn = item.querySelector('.faq-question');
+    const ans = item.querySelector('.faq-answer');
 
-//Carrossel Patrocinadores
+    btn.addEventListener('click', () => {
+        const isOpen = btn.getAttribute('aria-expanded') === 'true';
 
-// VERSÃO SIMPLES E FUNCIONAL
-console.log('Carrossel iniciado!'); // Verifique se aparece no console
+    // Alterna o estado do botão (para a setinha ▼/▲)
+    btn.setAttribute('aria-expanded', String(!isOpen));
 
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM carregado!');
-    
-    // Configurações básicas
-    const track = document.getElementById('carrosselTrack');
-    const items = track.querySelectorAll('.carrossel-item');
-    const speed = 1; // Velocidade do movimento
-    
-    console.log('Itens encontrados:', items.length);
-    
-    // Função de animação
-    function animarCarrossel() {
-        let position = 0;
-        
-        function mover() {
-            position -= speed;
-            
-            // Calcula a largura total dos itens originais (8 itens)
-            const totalWidth = (200 + 40) * 8; // width + margin
-            
-            // Quando chega ao final dos itens originais, reseta
-            if (Math.abs(position) >= totalWidth) {
-                position = 0;
-            }
-            
-            track.style.transform = `translateX(${position}px)`;
-            requestAnimationFrame(mover);
-        }
-        
-        mover();
+    // Anima a área da resposta
+    if (!isOpen) {
+      // Abrindo: define a altura real para animar
+      ans.style.maxHeight = ans.scrollHeight + 'px';
+    } else {
+      // Fechando: zera para recolher
+      ans.style.maxHeight = null;
     }
-    
-    // Inicia a animação
-    animarCarrossel();
-});
-
-// VERIFICAÇÃO DE ERROS
-window.addEventListener('error', function(e) {
-    console.error('Erro no carrossel:', e.error);
+  });
 });
 
 
-//Politicas animação
-const accordions = document.querySelectorAll('.accordion');
+ const carousel = document.querySelector(".carousel-patrocinadores");
+    const next = document.querySelector(".next");
+    const prev = document.querySelector(".prev");
 
-accordions.forEach(accordion =>{
-    accordion.addEventListener('click', () =>{
-        const body=accordion.querySelector('.accordion-body');
-        body.classList.toggle('active')
-    })
-})
+    let scrollAmount = 0;
+    // Pega a largura do item dinamicamente
+    const itemWidth = document.querySelector(".item").offsetWidth + 20; // 20px = 10px de padding de cada lado
+
+    next.addEventListener("click", () => {
+        // Verifica se ainda há espaço para rolar para a direita
+        const carouselWidth = carousel.scrollWidth;
+        const containerWidth = carousel.parentElement.offsetWidth;
+
+        if (Math.abs(scrollAmount) < (carouselWidth - containerWidth)) {
+            scrollAmount -= itemWidth;
+            carousel.style.transform = `translateX(${scrollAmount}px)`;
+        }
+    });
+
+    prev.addEventListener("click", () => {
+        // Verifica se ainda há espaço para rolar para a esquerda
+        if (scrollAmount < 0) {
+            scrollAmount += itemWidth;
+            carousel.style.transform = `translateX(${scrollAmount}px)`;
+        }
+    });

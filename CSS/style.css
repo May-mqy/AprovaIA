@@ -561,6 +561,23 @@ button{
     color: var(--cor-destaque);
 }
 
+.faq-question::before /*setinha antes do texto*/ { 
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg); /* seta apontando pra baixo */
+    margin-right: 8px;
+    transition: transform 0.3s ease;
+}
+
+.faq-question[aria-expanded="true"]::before {
+    transform: rotate(-135deg); /* seta aponta pra cima */
+}
+
+
 .faq-answer {
     max-height: 0;
     overflow: hidden;
@@ -583,8 +600,9 @@ button{
     margin: auto;
     height: 400px;
 
-    & h2{
+    & #titulo-patrocinadores{
     width: 100%;
+    font-size: 35px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -594,59 +612,82 @@ button{
     }
 }
 
-/* CONTAINER PRINCIPAL */
-.carrossel-container {
-    width: 100%;
-    overflow: hidden;
+.carousel-container {
+    /* Define o contêiner como um ponto de referência para os botões */
     position: relative;
-    height: 200px;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden; /* Esconde os itens que estão fora da visualização */
 }
 
-/* TRACK DO CARROSSEL */
-.carrossel-track {
-    display: flex;
-    animation: carrosselMove 30s linear infinite;
-    will-change: transform;
-    height: 100%;
+.carousel-patrocinadores {
+    display: flex; 
+    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
 }
 
-/* ITENS DO CARROSSEL */
-.carrossel-item {
-    flex: 0 0 auto;
-    width: 180px;
-    height: 180px;
-    margin: 0 20px;
+.item {
+    width: 230px;
+    height: 230px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: transparent;
-    border-radius: 15px;
-}
+    margin: 0px 8px 0px 70px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    flex-shrink: 0; /* Impede que os itens encolham */
 
-.carrossel-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    background-color: transparent;
-    border: 2px solid #c4c4c4;
-    border-radius: 15px;
-    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
-    padding: 10px;
-}
-
-/* ANIMAÇÃO PRINCIPAL */
-@keyframes carrosselMove {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-200px * 8));
+    & img {
+        max-width: 100%;
+        height: auto;
     }
 }
 
-/* PAUSA NO HOVER */
-.carrossel-container:hover .carrossel-track {
-    animation-play-state: paused;
+/* Estilo para as setas de navegação */
+.prev, .next {
+    position: absolute;
+    width: 45px;
+    top: 65%;
+    transform: translateY(-150%);
+    background: var(--cor-principal); /* Fundo semi-transparente */
+    color: var(--cor-fundo-clara);
+    border: none;
+    cursor: pointer;
+    z-index: 10; /* Garante que os botões fiquem sobre os itens */
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.prev {
+    left: 50px; /* Posição à esquerda do contêiner */
+}
+
+.next {
+    right: 50px; /* Posição à direita do contêiner */
+}
+
+#botao-patrocinadores{
+    position: relative;;
+    text-align: center;
+    display: inline;
+    transition: all 0.3s ease;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 45%;
+    
+    /*formato botão*/
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 7px 15px;
+    color: var(--cor-principal);
+    background: var(--cor-destaque);
+}
+
+#botao-patrocinadores:hover{
+    box-shadow: var(--cor-destaque);
+    color: var(--cor-principal);
+    transform: translateY(-2px);
 }
 
 /*Fim seção Patrocinadores

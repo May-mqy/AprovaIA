@@ -25,26 +25,35 @@
   <button class="next">&#10095;</button> <!-- seta direita -->
 </div>
 
+
 <script>
-const carousel = document.querySelector(".carousel-patrocinadores");
-const next = document.querySelector(".next");
-const prev = document.querySelector(".prev");
+    const carousel = document.querySelector(".carousel-patrocinadores");
+    const next = document.querySelector(".next");
+    const prev = document.querySelector(".prev");
 
-let scrollAmount = 0;
-const itemWidth = 210; // largura + margem do card
+    let scrollAmount = 0;
+    // Pega a largura do item dinamicamente
+    const itemWidth = document.querySelector(".item").offsetWidth + 20; // 20px = 10px de padding de cada lado
 
-next.addEventListener("click", () => {
-  scrollAmount -= itemWidth;
-  carousel.style.transform = `translateX(${scrollAmount}px)`;
-});
+    next.addEventListener("click", () => {
+        // Verifica se ainda há espaço para rolar para a direita
+        const carouselWidth = carousel.scrollWidth;
+        const containerWidth = carousel.parentElement.offsetWidth;
 
-prev.addEventListener("click", () => {
-  scrollAmount += itemWidth;
-  carousel.style.transform = `translateX(${scrollAmount}px)`;
-});
+        if (Math.abs(scrollAmount) < (carouselWidth - containerWidth)) {
+            scrollAmount -= itemWidth;
+            carousel.style.transform = `translateX(${scrollAmount}px)`;
+        }
+    });
+
+    prev.addEventListener("click", () => {
+        // Verifica se ainda há espaço para rolar para a esquerda
+        if (scrollAmount < 0) {
+            scrollAmount += itemWidth;
+            carousel.style.transform = `translateX(${scrollAmount}px)`;
+        }
+    });
 </script>
-
-
 
 </body>
 </html>
