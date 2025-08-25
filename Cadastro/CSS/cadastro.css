@@ -75,7 +75,7 @@ body {
 h1{
     color: white;
     font-family: "Poppins", sans-serif;
-    font-size: 40px;
+    font-size: 35px;
     margin-right: 7%;
 }
 .azul-login{
@@ -234,6 +234,8 @@ h1{
     border: none;
     margin-top: 1rem;
     border: 3px solid transparent;
+    text-decoration: none;
+    text-align: center;
 }
 
 .btn-3:hover {
@@ -242,6 +244,10 @@ h1{
     border: 3px solid #0A113F;
     color: #0A113F;
     box-shadow: 0 6px 12px rgba(10, 17, 63, 0.4);
+}
+.btn-3 a{
+    text-decoration: none;
+    color: white;
 }
 
 .btn:hover {

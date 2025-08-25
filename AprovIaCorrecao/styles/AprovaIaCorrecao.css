@@ -45,7 +45,6 @@ body{
 
 #title_logo{
     margin: 25px;
-
     font-size: 46px;
     color: whitesmoke;
     width: 30px;
@@ -456,4 +455,278 @@ nav h3 {
 
 .footer-bottom a:hover {
     color: var(--cor-destaque);
+}
+/* ADICIONAR ESTAS REGRAS NO FINAL DO ARQUIVO CSS EXISTENTE PARA SUBSTITUIR AS REGRAS DO HEADER E FOOTER */
+
+/* ===== HEADER / CABEÇALHO - ATUALIZADO PARA FICAR IGUAL AO PATROCINADORES ===== */
+#nav1 {
+    flex-grow: 1;
+    justify-content: center;
+    margin: 0 clamp(10px, 2vw, 20px);
+    gap: clamp(15px, 2vw, 30px);
+    flex-wrap: wrap;
+}
+
+#nav1 a {
+    font-size: clamp(18px, 2.2vw, 25px);
+    white-space: nowrap;
+}
+
+#nav2 {
+    gap: clamp(10px, 1.5vw, 20px);
+    flex-shrink: 0;
+}
+
+#nav2 ul {
+    display: flex;
+    gap: clamp(10px, 1.5vw, 20px);
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#cadastro a {
+    font-size: clamp(16px, 2vw, 25px);
+    padding: clamp(5px, 1vw, 7px) clamp(10px, 1.5vw, 15px);
+    white-space: nowrap;
+    border: 1px solid white;
+    border-radius: 50px;
+    color: var(--cor-principal);
+    background: var(--cor-destaque);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    min-height: 40px;
+    transition: all 0.3s ease;
+}
+
+#cabecalho {
+    flex-wrap: wrap;
+    padding: 0 clamp(20px, 3vw, 50px);
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* ===== FOOTER ATUALIZADO PARA FICAR IGUAL AO PATROCINADORES ===== */
+.footer {
+    background-color: var(--cor-principal);
+    color: var(--cor-fundo-clara);
+    padding: 30px 50px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    margin: 0;
+    width: 85px;
+}
+
+.logo-img {
+    height: 40px;
+    width: 85px;
+}
+
+.destaque3 {
+    color: var(--cor-destaque);
+}
+
+.footer-title {
+    margin: 15px 0 8px;
+    font-weight: bold;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+    font-size: 40px;
+}
+
+.social-icons a {
+    color: white;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--cor-destaque);
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 6px 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--cor-destaque);
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.footer-bottom a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-bottom a:hover {
+    color: var(--cor-destaque);
+}
+
+/* ===== RESPONSIVIDADE - APENAS HEADER E FOOTER ===== */
+
+/* Tablets grandes e desktops pequenos - até 1400px */
+@media (max-width: 1400px) {
+    #title_logo {
+        display: none;
+    }
+    
+    .logo-container {
+        margin-left: 5px;
+    }
+    
+    #logo {
+        margin-right: 0;
+        width: 85px;
+    }
+    
+    #nav1 {
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #cabecalho {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1100px) {
+    .texto-completo {
+        display: none !important;
+    }
+    
+    .texto-reduzido {
+        display: inline !important;
+    }
+
+    #cadastro a:hover {
+        background-color: rgba(138, 241, 1, 0.8);
+        box-shadow: 0 5px 15px rgba(138, 241, 1, 0.3);
+        transform: translateY(-2px);
+    }
+}
+
+@media (max-width: 768px) {
+    #cabecalho {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+    
+    .logo-container {
+        margin: 0 0 15px 0;
+    }
+    
+    #nav1 {
+        margin: 0 0 15px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    #nav2 {
+        margin: 0;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Desktop grande - até 1800px */
+@media (max-width: 1800px) {
+    #title_logo {
+        display: none;
+    }
+}
+
+/* Desktop médio - até 1540px */
+@media (max-width: 1540px) {
+    .texto-completo {
+        display: none !important;
+    }
+    
+    .texto-reduzido {
+        display: inline !important;
+    }
+}
+
+
+/* ===== RESPONSIVOS ADICIONAIS PARA DESKTOP GRANDE ===== */
+@media (min-width: 1500px) {
+    #principal {
+        padding: 60px 80px;
+        gap: 60px;
+    }
+    
+    .paragrafo {
+        font-size: 22px;
+    }
+    
+    #logo {
+        width: 85px;
+    }
+    
+    #title_logo {
+        font-size: 46px;
+        font-weight: 700px;
+    }
+    
+    .patrocinadores {
+        padding: 80px 0px;
+    }
+    
+    .patrocinadores h2 {
+        font-size: 36px;
+    }
+    
+    #imagem-principal img {
+        width: 100%;
+        max-height: 1000px;
+    }
 }
