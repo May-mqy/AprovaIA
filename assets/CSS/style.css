@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth; /*Animação que anda sozinho quando apertar em Dúvidas Frequentes*/
+}
+
 :root {
   --cor-principal: #0A113F;
   --cor-fundo-clara: #FFFAFA;
@@ -516,7 +520,8 @@ button{
 
 /*Seção Dúvidas*/
 /* FAQ (Frequently Asked Questions / Perguntas Frequentes). */
-.faq {
+
+#faq {
     max-width: 1500px;
     margin: 40px auto;
     font-family: 'Poppins', sans-serif;
@@ -524,7 +529,7 @@ button{
     margin-bottom: 120px;
 }
 
-.faq h2 {
+#faq h2 {
     width: 100%;
     font-size: 40px;
     font-weight: bold;
@@ -591,7 +596,7 @@ button{
     font-size: 25px;
 }
 
-/*Seção Patrocinadores*/
+/*Seção Patrocinadores/Parceiros/Financiadores*/
 .secao_patrocinadores{
     position: relative;
     color: var(--cor-principal);
@@ -622,7 +627,8 @@ button{
 
 .carousel-patrocinadores {
     display: flex; 
-    transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+    transition: transform 0.3s ease-in-out; /* Adiciona uma 
+    transição suave */
 }
 
 .item {
@@ -634,8 +640,9 @@ button{
     margin: 0px 8px 0px 70px;
     text-align: center;
     padding: 20px;
-    border-radius: 20px;
+
     flex-shrink: 0; /* Impede que os itens encolham */
+    
 
     & img {
         max-width: 100%;
@@ -647,23 +654,24 @@ button{
 .prev, .next {
     position: absolute;
     width: 45px;
-    top: 65%;
-    transform: translateY(-150%);
-    background: var(--cor-principal); /* Fundo semi-transparente */
+    top: 40%;
+    left: auto;
+    transform: translate(-20%, -50%);
+    background: #0a113f79; /* Fundo semi-transparente */
     color: var(--cor-fundo-clara);
     border: none;
     cursor: pointer;
     z-index: 10; /* Garante que os botões fiquem sobre os itens */
     padding: 20px;
-    border-radius: 50%;
+    border-radius: 90%;
 }
 
 .prev {
-    left: 50px; /* Posição à esquerda do contêiner */
+    left: 60px; /* Posição à esquerda do contêiner */
 }
 
 .next {
-    right: 50px; /* Posição à direita do contêiner */
+    right: 60px; /* Posição à direita do contêiner */
 }
 
 #botao-patrocinadores{
@@ -678,7 +686,7 @@ button{
     
     /*formato botão*/
     border: 1px solid white;
-    border-radius: 50px;
+    border-radius: 60px;
     padding: 7px 15px;
     color: var(--cor-principal);
     background: var(--cor-destaque);

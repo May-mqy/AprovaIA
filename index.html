@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./assets/CSS/style.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'rel='stylesheet'>
     <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
-    <link rel="shortcut icon" href="Imagens/logoaprovaia.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/Imagens/logoaprovaia.svg" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
@@ -216,7 +216,7 @@
 
      <!--Seção Dúvidas-->
      <!-- FAQ (Frequently Asked Questions / Perguntas Frequentes). -->
-     <section class="faq">
+     <section id="faq">
   <h2>FICOU NA DÚVIDA? CONHEÇA 3 MOTIVOS PARA ESTUDAR COM O <span class="destaque1">APROVA<span class="destaque2">IA</span></span></h2>
 
   <div class="faq-item">
@@ -243,18 +243,7 @@
   </div>
 </section>
 
-<script>
-const questions = document.querySelectorAll(".faq-question");
 
-questions.forEach(q => {
-  q.addEventListener("click", () => {
-    const answer = q.nextElementSibling;
-    answer.style.maxHeight = answer.style.maxHeight ? null : answer.scrollHeight + "px";
-    
-    q.classList.toggle("active");
-  });
-});
-</script>
 
 <!--Fim Seção Dúvidas -->
 
@@ -317,7 +306,7 @@ questions.forEach(q => {
       <p class="footer-title">Sobre</p>
       <ul>
         <li><a href="./assets/HTML/sobre.html">Sobre nós</a></li>
-        <li><a href="#">Dúvidas frequentes</a></li>
+        <li><a href="#faq">Dúvidas frequentes</a></li>
         <li><a href="./assets/HTML/patrocinadores.html">Parceiros</a></li>
       </ul>
     </div>
