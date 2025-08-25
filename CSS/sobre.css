@@ -20,6 +20,7 @@
 
 body {
     overflow-x: hidden;
+    color: var(--cor-principal);
 }
 
 /* Inicio estilo header */
