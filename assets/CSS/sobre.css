@@ -18,6 +18,7 @@ body{
     background-color:var(--cor-fundo-clara);
     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
+    color: var(--cor-principal);
 }
 
 /* Inicio estilo Header/ Cabeçalho */

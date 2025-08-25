@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Playwrite+CU:wght@100..400&family=Playwrite+RO:wght@100..400&family=Roboto:ital,wght@0,100..900;1,100..900&family=Special+Gothic+Condensed+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /* inicio css reset */
 * {
     margin: 0;
@@ -6,26 +6,26 @@
     box-sizing: border-box;
 } 
 /* Fim css reset */
-/* Inicio config fixa */
-body{
-    background-image: url("../imagens/background-patrocinio.png");
-    background-size: cover;   /* Faz preencher a tela */
-    background-position: center; /* Centraliza */
-    background-repeat: no-repeat; /* Não repete */
-    font-family: "Poppins", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-}
-/* Fim config fixa */
-
 :root {
   --cor-principal: #0A113F;
   --cor-fundo-clara: #FFFAFA;
   --cor-destaque: #92FF00;
   --fonte-poppins: "Poppins", sans-serif;
 }
+/* Inicio config fixa */
+body{
+    background-image: url("../imagens/background-patrocinio.png");
+    background-size: cover;   /* Faz preencher a tela */
+    background-position: center; /* Centraliza */
+    background-repeat: no-repeat; /* Não repete */
+    font-family: var(--fonte-poppins);
+    font-weight: 500;
+    font-style: normal;
+}
+/* Fim config fixa */
 
-/*Inicio Cabeçalho*/
+
+/* Inicio estilo header/ Cabeçalho */
 #cabecalho{
     display: flex;
     flex-direction: row;
@@ -45,11 +45,11 @@ body{
 
 #title_logo{
     margin: 25px;
-
     font-size: 46px;
     color: whitesmoke;
     width: 30px;
-    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-family: var(--fonte-poppins);
 }
 
 
@@ -139,140 +139,96 @@ body{
     color: var(--cor-principal);
     transform: translateY(-2px);
 }
-/* Fim estilo header */
+
+/* Começo dos estilos da página de correção da redação */
+
+main {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
 
 #info-da-section {
+    
     position: relative;
     margin-top: 20px;
     color: #0A113F;
-    margin-left: 200px;
-}
+    margin-left: 80px;
 
-main {
-    position: relative;
-    margin-bottom: 5%;
 }
 
 #section-principal {
     position: relative;
     border-radius: 40px;
-    width: 80%;
-    height: 700px;
+    width: 96%;
+    height: 800px;
     background-color: #EDEDED;
     border: solid 1px #878787;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
     box-shadow: 0 17px 20px #c0c0c0;
-
 }
 
-#lado-esquerdo {
+/*Começo da estilização do primeiro quadro (o da esquerda)*/
+
+#composition-section {
     position: relative;
-    width: 24%;
-    height: 500px;
-    /* background-color: azure; */
-    margin-top: 110px;
-    margin-left: 90px;
-    float: left;
-}
-
-#select {
-    position: relative;
-    width: 100%;
-    height: 70px;
-    padding-left: 2%;
-    font-size: large;
-    color: #808080;
-    border-radius: 10px;
-    border: 1px solid #D3D3D3 ;
-}
-
-#text-perguntas {
-    position: relative;
-    resize: none;
-    font-size: large;
-    font-family: "Poppins", sans-serif;
-    width: 100%;
-    height: 270px;
-    margin-top: 100px;
-    color: #808080;
-    padding: 3%;
-    border-radius: 10px;
-    border: 1px solid #D3D3D3 ;
-}
-
-#container-botoes {
-    width: 100%;
-    margin-top: 23px;
-    display: flex;
-    justify-content: space-between;
-}
-
-#deleteButton {
-    position: relative;
-    width: 35%;
-    height: 40px;
-    background-color: #C5D7FF;
-    border-radius: 30px;
-    display: inline-flex;  
-    align-items: center;
-    gap: 0px;
-    padding: 0 12px;
-    border: none;
-    float: left;
-}
-
-#deleteButton svg {
-    margin-right: 8px;
-}
-
-#deleteButton:hover {
-    background-color: #FF6347;
-    color: #0A113F;
-}
-
-
-#sendButton {
-    position: relative;
-    width: 35%;
-    height: 40px;
-    border-radius: 30px;
-    background-color: #dfdfdf;
-    border: 1px solid #D3D3D3 ;
-    float: left;
-}
-
-#sendButton:hover {
-    background-color: #0A113F;
-    color: #fff;
-}
-
-#area-resposta {
-    position: relative;
-    width: 62%;
-    height: 500px;
     background-color: #fff;
-    margin-top: 110px;
-    margin-left: 50px;
-    border-radius: 10px;
-    border: 1px solid #D3D3D3 ;
+    width: 30%;
+    height: 650px;
+    border-radius: 30px;
+    border: solid 1px #ccc;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-bottom: 60px;
     float: left;
 }
 
-#superior-quadro{
+#nav-composition {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    height: 60px;
+    font-size: 21px;
     display: flex;
     align-items: center;
+    gap: 12px;
+    width: 100%;
+    height: 60px;
+}
+
+#nav-composition h3 {
     margin-left: 20px;
 }
 
+#nav-composition select,
+#nav-composition .button-background {
+  height: 40px;
+}
 
-h3 {
+#nav-composition .button-background {
+  margin: 0;             
+  display: inline-flex;  
+  align-items: center;
+  gap: 8px;
+  padding: 0 12px;
+  border: none;
+  border-radius: 10px;
+  margin-left: 20px;
+}
+
+#nav-composition .button-background svg {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 auto;
+}
+
+nav h3 {
     color: #0A113F;
+}
+
+#linha {
+    position: relative;
+    width: 100%;
+    border-bottom: 1px solid #8B8383;
 }
 
 .button-background {
@@ -288,21 +244,76 @@ h3 {
     padding: 0 12px;
 }
 
-#botao-copiar {
-    margin-right: 20px;
-    width: 100px;
-    height: 40px;
-}
-
 .button-background:hover {
     color: #0A113F;
     background-color: #F6F5F5;
 }
 
-#linha {
+#botao-documento {
     position: relative;
+    margin-left: 20px;
+    width: 170px;
+    height: 40px;
+}
+
+#botao-copiar {
+    width: 100px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+#text-composition {
+    position: relative;
+    resize: none;
+    font-size: large;
+    font-family: "Poppins", sans-serif;
     width: 100%;
-    border-bottom: 1px solid #D3D3D3;
+    height: 586px;
+    align-items: baseline;
+    border: none;
+    padding-top: 15px;
+    padding-left: 13px;
+    padding-right: 13px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#text-composition::placeholder {
+    position: relative;
+    color: #333;
+}
+
+
+
+/*Fim da estilização do primeiro quadro (o da esquerda)*/
+
+/*Começo da estilização do Segundo quadro (o da direita)*/
+
+#response-section {
+    position: relative;
+    background-color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: large;
+    width: 60%;
+    height: 650px;
+    border-radius: 30px;
+    border: solid 1px #ccc;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-bottom: 60px;
+    float: left;
+}
+
+#response-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
 }
 
 .response-box {
@@ -316,11 +327,59 @@ h3 {
     overflow-y: scroll;
     overflow: auto;
     color: #333;
-    max-height: 430px;
+    max-height: 717px;
     width: 100%;
 }
 
-/* Seção Rodapé Footer Geral*/
+#container-botoes {
+    width: 100%;
+    margin-top: 13px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#deleteButton {
+    position: relative;
+    width: 30%;
+    height: 45px;
+    background-color: #C5D7FF;
+    border-radius: 30px;
+    display: inline-flex;  
+    align-items: center;
+    gap: 0px;
+    padding: 0 30px;
+    border: none;
+    float: left;
+}
+
+#deleteButton:hover {
+    background-color: #FF6347;
+    color: #0A113F;
+}
+
+#deleteButton svg {
+    margin-right: 5px;
+}
+
+#sendButton {
+    position: relative;
+    width: 30%;
+    height: 45px;
+    border-radius: 30px;
+    background-color: #dfdfdf;
+    border: none ;
+    float: left;
+}
+
+#sendButton:hover {
+    background-color: #0A113F;
+    color: #fff;
+}
+
+
+/*Fim da estilização do Segundo quadro (o da direita)*/
+
+   /* Inicio Seção Rodapé Footer Geral*/
 .footer {
     background-color: var(--cor-principal);
     color: var(--cor-fundo-clara);
@@ -412,8 +471,6 @@ h3 {
 .footer-bottom a:hover {
     color: var(--cor-destaque);
 }
-
-
 /* ADICIONAR ESTAS REGRAS NO FINAL DO ARQUIVO CSS EXISTENTE PARA SUBSTITUIR AS REGRAS DO HEADER E FOOTER */
 
 /* ===== HEADER / CABEÇALHO - ATUALIZADO PARA FICAR IGUAL AO PATROCINADORES ===== */
