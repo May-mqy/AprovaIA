@@ -196,17 +196,19 @@ body {
     flex-direction: row;
     align-items: center;
     text-align: center;
-    padding: 20px;
+    
     gap: 40px;
 }
 
 #texto-principal {
     width: 100%;
     max-width: 800px;
+    margin-left: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; /* Alinha itens à esquerda */
+    text-align: left; /* Alinha texto à esquerda */
 }
 
 #imagem-principal {
@@ -219,8 +221,9 @@ body {
 
 #imagem-principal img {
     width: 100%;
-    max-width: 650px;
+    max-width: 810px; /* Aumentei de 650px para 800px */
     height: auto;
+    margin-left: 20%;
     object-fit: contain;
 }
 
@@ -240,8 +243,10 @@ body {
     font-family: "Poppins", sans-serif;
     line-height: 1.6;
     max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
 }
-
 .description {
     color: white;
     font-size: 24px !important;
@@ -292,7 +297,7 @@ body {
 
 .carrossel-track {
     display: flex;
-    animation: carrosselMove 30s linear infinite;
+    animation: carrosselMove 100s linear infinite;
     will-change: transform;
     height: 100%;
 }
@@ -578,7 +583,7 @@ body {
     }
     
     #principal {
-        padding: 20px 15px;
+        /* padding: 20px 15px; */
         gap: 30px;
     }
     
@@ -600,7 +605,7 @@ body {
     }
     
     #imagem-principal img {
-        max-width: 500px;
+        max-width: 500px; /* Aumentei de 500px para 600px */
     }
 }
 
@@ -624,7 +629,7 @@ body {
     #principal {
         flex-direction: column;
         min-height: auto;
-        padding: 40px 20px;
+        /* padding: 40px 20px; */
         text-align: center;
     }
     
@@ -678,7 +683,7 @@ body {
     }
     
     #principal {
-        padding: 30px 15px;
+        /* padding: 30px 15px; */
     }
     
     .titulo {
@@ -715,7 +720,7 @@ body {
 
 @media (max-width: 576px) {
     #principal {
-        padding: 20px 10px;
+        /* padding: 20px 10px; */
     }
     
     .titulo {
@@ -755,7 +760,7 @@ body {
 @media (max-width: 480px) {
     #principal {
         min-height: calc(100vh - 120px);
-        padding: 15px 8px;
+        /* padding: 15px 8px; */
     }
     
     .titulo {
@@ -802,7 +807,7 @@ body {
 /* ===== RESPONSIVOS ADICIONAIS PARA DESKTOP GRANDE ===== */
 @media (min-width: 1500px) {
     #principal {
-        padding: 60px 80px;
+        /* padding: 60px 80px; */
         gap: 60px;
     }
     
@@ -834,7 +839,7 @@ body {
 
 @media (min-width: 1024px) {
     #principal {
-        padding: 60px 80px;
+        /* padding: 60px 80px; */
         gap: 60px;
     }
 
@@ -912,7 +917,7 @@ body {
     }
     
     #principal {
-        padding: 20px 15px;
+        /* padding: 20px 15px; */
         gap: 30px;
     }
     
@@ -950,7 +955,7 @@ body {
     #principal {
         flex-direction: column;
         min-height: auto;
-        padding: 40px 20px;
+        /* padding: 40px 20px; */
         text-align: center;
     }
     
@@ -995,7 +1000,6 @@ body {
 /* ===== RESPONSIVOS ADICIONAIS PARA DESKTOP GRANDE ===== */
 @media (min-width: 1500px) {
     #principal {
-        padding: 60px 80px;
         gap: 60px;
     }
     
@@ -1027,8 +1031,7 @@ body {
 
 @media (min-width: 1024px) {
     #principal {
-        padding: 60px 80px;
-        gap: 60px;
+        
     }
     
     #title_logo {
@@ -1045,6 +1048,125 @@ body {
     
     #imagem-principal img {
         width: 150%;
-        max-height: 1000px;
+        max-height: 1900px;
+    }
+}
+
+
+
+#container {
+    flex: 1; /* Faz o container principal ocupar o espaço restante */
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o container */
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+h1 {
+    font-size: 58px;
+    color: #0A113F;
+    font-weight: 700;
+}
+
+#description-m{
+    font-size: 30px;
+}
+
+/* --- INÍCIO FORMATAÇÃO DO ACCORDION --- */
+.accordion {
+    border: 1px solid #E0E0E0;
+    border-radius: 12px;
+    background-color: #FFFFFF;
+}
+
+.accordion-header {
+    width: 100%;
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #0A113F;
+    cursor: pointer;
+    text-align: left;
+}
+
+.accordion-header .icon {
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.accordion-body {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    color: #333;
+    font-size: 20px;
+    line-height: 1.7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Alinha itens à esquerda */
+    text-align: left; /* Alinha texto à esquerda */
+    margin-left: 4%;
+}
+
+.accordion-body p,
+.accordion-body ul {
+    margin-bottom: 16px;
+}
+
+.accordion-body ul {
+    list-style-position: inside;
+    padding-left: 20px;
+}
+
+.accordion-body.active {
+    height: auto;
+    opacity: 1;
+    padding: 0 20px 20px 20px;
+}
+/* --- FIM DA FORMATAÇÃO DO ACCORDION --- */
+
+
+
+
+.carousel-container {
+    /*Define o contêiner como um ponto de referência para os botões */
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden; /* Esconde os itens que estão fora da visualização */
+}
+
+.carousel-patrocinadores {
+    display: flex; 
+    transition: transform 0.3s ease-in-out; /* Adiciona uma 
+    transição suave */
+}
+
+.item {
+    width: 230px;
+    height: 230px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 8px 0px 70px;
+    text-align: center;
+    padding: 20px;
+
+    flex-shrink: 0; /* Impede que os itens encolham */
+
+
+    & img {
+        max-width: 100%;
+        height: auto;
     }
 }
