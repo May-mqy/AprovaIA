@@ -180,7 +180,7 @@ main {
     border-radius: 30px;
     border: solid 1px #ccc;
     margin-top: 50px;
-    margin-left: 100px;
+    margin-left: 90px;
     margin-bottom: 60px;
     float: left;
 }
@@ -340,8 +340,9 @@ nav h3 {
 
 #deleteButton {
     position: relative;
-    width: 30%;
-    height: 45px;
+    width: 28%;
+    height: 50px;
+    font-size: large;
     background-color: #C5D7FF;
     border-radius: 30px;
     display: inline-flex;  
@@ -363,8 +364,9 @@ nav h3 {
 
 #sendButton {
     position: relative;
-    width: 30%;
-    height: 45px;
+    width: 28%;
+    height: 50px;
+    font-size: large;
     border-radius: 30px;
     background-color: #dfdfdf;
     border: none ;

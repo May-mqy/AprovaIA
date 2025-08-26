@@ -653,8 +653,9 @@ button{
 /* Estilo para as setas de navegação */
 .prev, .next {
     position: absolute;
-    width: 45px;
-    top: 40%;
+    width: 60px;
+    height: 60px;
+    top: 46%;
     left: auto;
     transform: translate(-20%, -50%);
     background: #0a113f79; /* Fundo semi-transparente */
@@ -662,16 +663,23 @@ button{
     border: none;
     cursor: pointer;
     z-index: 10; /* Garante que os botões fiquem sobre os itens */
-    padding: 20px;
-    border-radius: 90%;
+    padding: 0px;
+    border-radius: 10%;
+    font-size: 25px;
+}
+
+.prev:hover, .next:hover {
+    background-color: #050e35;
+    color: #fff;
+    transition: 0.5s all;
 }
 
 .prev {
-    left: 60px; /* Posição à esquerda do contêiner */
+    left: 43px; /* Posição à esquerda do contêiner */
 }
 
 .next {
-    right: 60px; /* Posição à direita do contêiner */
+    right: 20px; /* Posição à direita do contêiner */
 }
 
 #botao-patrocinadores{

@@ -212,8 +212,9 @@ main {
 
 #deleteButton {
     position: relative;
-    width: 35%;
-    height: 40px;
+    width: 30%;
+    height: 45px;
+    font-size: large;
     background-color: #C5D7FF;
     border-radius: 30px;
     display: inline-flex;  
@@ -236,8 +237,9 @@ main {
 
 #sendButton {
     position: relative;
-    width: 35%;
-    height: 40px;
+    width: 30%;
+    height: 45px;
+    font-size: large;
     border-radius: 30px;
     background-color: #dfdfdf;
     border: 1px solid #D3D3D3 ;
